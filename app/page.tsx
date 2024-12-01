@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 import Video from "@/components/Video";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import Pagination from "@/components/Pagination";
+import Pagination from "@/components/Paginations";
 
 export default function Home() {
 
