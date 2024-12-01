@@ -6,7 +6,7 @@ const nextConfig = {
   // basePath: isProd ? '/Roi-Innovator' : '',
   // assetPrefix: isProd ? '/Roi-Innovator' : '',
   distDir: 'out' ,
-  // output: 'export',
+  output: 'export',
   // trailingSlash: true,
   experimental: {
     appDir: true,
