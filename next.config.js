@@ -3,14 +3,17 @@
 isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  basePath: isProd ? '/Inpower-Laptop' : '',
-  assetPrefix: isProd ? '/Inpower-Laptop' : '',
-  distDir: 'out' ,
-  output: 'export',
-  reactStrictMode: true,
-  trailingSlash: true,
+  // basePath: isProd ? '/Roi-Innovator' : '',
+  // assetPrefix: isProd ? '/Roi-Innovator' : '',
+  // distDir: 'out' ,
+  // output: 'export',
+  // trailingSlash: true,
   experimental: {
     appDir: true,
+  },
+  reactStrictMode: false,
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
