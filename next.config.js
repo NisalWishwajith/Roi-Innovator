@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-isProd = process.env.NODE_ENV === 'production';
+isProd = process.env.NODE_ENV === 'development';
 
 const nextConfig = {
   basePath: isProd ? '/Inpower-Laptop' : '',
-  assetPrefix : isProd ? '/Inpower-Laptop/' : '',
+  assetPrefix : isProd ? '/Inpower-Laptop' : '',
   output : 'export',
   experimental: {
     appDir: true,
