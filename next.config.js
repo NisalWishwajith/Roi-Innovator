@@ -3,11 +3,11 @@
 isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  // basePath: isProd ? '/Roi-Innovator' : '',
-  // assetPrefix: isProd ? '/Roi-Innovator' : '',
+  basePath: isProd ? '/Roi-Innovator' : '',
+  assetPrefix: isProd ? '/Roi-Innovator' : '',
   distDir: 'out' ,
   output: 'export',
-  // trailingSlash: true,
+  trailingSlash: true,
   experimental: {
     appDir: true,
   },
