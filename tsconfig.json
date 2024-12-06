@@ -37,8 +37,7 @@
     "components/Roadmap/index.jsx",
     "components/Paginations/index.tsx",
     "components/Roadmap/RoadMapItem.jsx",
-    "components/Hero/index.tsx",
-    "out/types/**/*.ts"
+    "components/Hero/index.tsx"
   ],
   "exclude": [
     "node_modules"
