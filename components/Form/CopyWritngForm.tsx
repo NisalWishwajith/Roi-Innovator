@@ -74,17 +74,6 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              
-            </motion.div>
-
-
-            <motion.div
-              ref={ref2} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
             <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 02. Target Audience </h1>
 
@@ -130,15 +119,6 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-            </motion.div>
-
-            <motion.div
-              ref={ref3} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 03.  Brand Voice & Tone </h1>
 
@@ -184,16 +164,6 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-            </motion.div>
-
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 04. Types of Copy </h1>
 
@@ -519,16 +489,7 @@ const CopyWritingForm = () => {
                   required
                 />
               </div>
-            </motion.div>
 
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 06. Competitor Analysis </h1>
               <div className='pb-5'>
@@ -608,15 +569,6 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-            </motion.div>
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 08. Approval & Feedback Process </h1>
 
@@ -694,15 +646,7 @@ const CopyWritingForm = () => {
                   required
                 />
               </div>
-            </motion.div>
 
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 10. Performance & Measurement </h1>
 
@@ -854,11 +798,8 @@ const CopyWritingForm = () => {
                   placeholder='e.g. content strategy, editing, proofreading'
                   required
                 />
-              </div>  
-                      
+              </div>                 
             </motion.div>
-
-
           </form >
         </div >
       </div >

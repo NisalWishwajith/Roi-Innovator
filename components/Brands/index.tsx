@@ -49,8 +49,7 @@ const Brands = () => {
       <div className="flex flex-wrap">
         <div className="w-full">
           <div
-            className="wow border-t-4 border-b-4 border-iceblue fadeInUp m-auto grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center w-full px-8 py-4"
-            
+            className="wow border-t-2 border-b-2 border-gray-400 fadeInUp m-auto grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center w-full px-8 py-4"
           >
             {brandsData.map((brand) => (
               <SingleBrand key={brand.id} brand={brand} />
@@ -67,7 +66,7 @@ export default Brands;
 
 
 const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { href, image, name } = brand;
+  const { image, name } = brand;
 
   return (
     <div className="grayscale hover:grayscale-0 flex w-full items-center justify-center py-[5px] max-w-full">

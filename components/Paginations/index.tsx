@@ -4,7 +4,7 @@ import { WebDesign, SocialMediaManagement, PaidAdvertising, MobileAppDevelopment
 import { motion, useInView } from 'framer-motion';
 
 export default function TabsComponent() {
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useState('webdesign');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

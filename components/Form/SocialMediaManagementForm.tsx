@@ -145,16 +145,7 @@ const WebDesignForm = () => {
                   required
                 />
               </div>
-            </motion.div>
 
-
-            <motion.div
-              ref={ref2} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <h1 className='text-2xl font-bold py-3'> (02) Current Social Media Presence
               </h1>
 
@@ -368,29 +359,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='campaign'>
                       <input
-                        id='yes'
+                        id='campaign-yes'
                         name="campaign"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='campaign-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='campaign-no'
                       name="campaign"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='campaign-no'> No </label>
                   </div>
                 </div>
               </div>
@@ -401,29 +390,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='traffic'>
                       <input
-                        id='yes'
+                        id='traffic-yes'
                         name="traffic"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='traffic-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='traffic-no'
                       name="traffic"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='traffic-no'> No </label>
                   </div>
                 </div>
               </div>  
@@ -515,29 +502,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='person'>
                       <input
-                        id='yes'
+                        id='person-yes'
                         name="person"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='person-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='person-no'
                       name="person"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='person-no'> No </label>
                   </div>
                 </div>
               </div>
@@ -549,29 +534,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='assistant'>
                       <input
-                        id='yes'
+                        id='assistant-yes'
                         name="assistant"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='assistant-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='assistant-no'
                       name="assistant"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='assistant-no'> No </label>
                   </div>
                 </div>
               </div>  
@@ -600,29 +583,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='guidline'>
                       <input
-                        id='yes'
+                        id='guidline-yes'
                         name="guidline"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='guidline-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='guidline-no'
                       name="guidline"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='guidline-no'> No </label>
                   </div>
                 </div>
               </div>
@@ -703,29 +684,27 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='plan'>
                       <input
-                        id='yes'
+                        id='plan-yes'
                         name="campaign"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='yes'> Yes </label>
+                    <label htmlFor='plan-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='no'
+                      id='plan-no'
                       name="campaign"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='no'> No </label>
+                    <label htmlFor='plan-no'> No </label>
                   </div>
                   </div>
 

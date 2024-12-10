@@ -71,16 +71,7 @@ const MobileAppDevelopmentForm = () => {
                   required
                 />
               </div>            
-            </motion.div>
 
-
-            <motion.div
-              ref={ref2} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
             <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 02. Contact Information </h1>
               <div className='pb-5'>
@@ -125,15 +116,7 @@ const MobileAppDevelopmentForm = () => {
                 />             
                 </div>
 
-            </motion.div>
 
-            <motion.div
-              ref={ref3} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 03.  Project Overview </h1>
 
@@ -245,16 +228,7 @@ const MobileAppDevelopmentForm = () => {
                   required
                 />             
                 </div>                         
-            </motion.div>
 
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 04. Features & Functionality </h1>
               <div className='pb-5'>
@@ -342,16 +316,7 @@ const MobileAppDevelopmentForm = () => {
                 <textarea name="Inspiration_Apps" placeholder=" Please provide examples, if any. " className='placeholder-slate-700 p-2 md:p-3 w-full h-30 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
               </div>            
-            </motion.div>
 
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 06. Maintenance & Updates </h1>
               <div className='pb-5'>
@@ -401,15 +366,6 @@ const MobileAppDevelopmentForm = () => {
                 />
               </div>
              
-            </motion.div>
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 08. Additional Comments </h1>
 
@@ -420,7 +376,6 @@ const MobileAppDevelopmentForm = () => {
                 <textarea name="Comments" placeholder=" Type anything.. " className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
               </div>    
-
             </motion.div>
 
           </form >

@@ -19,8 +19,6 @@ const PaidAdvertisingForm = () => {
     <>
       <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue"> Paid Advertising </h2>
       <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
-        {/* Contact Form */}
-
         <div className="lg:w-full">
           <form className="">
             <motion.div
@@ -51,7 +49,6 @@ const PaidAdvertisingForm = () => {
               </label>
               <div className='grid grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
                     <input
                       id='answer1'
                       name="Primary_Goal"
@@ -60,7 +57,6 @@ const PaidAdvertisingForm = () => {
                       className="w-4 h-4"
                       required
                     />
-                  </label>
                   <label htmlFor='Answer1'> Increasing Brand Awareness </label>
                 </div>
 
@@ -186,16 +182,7 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer3'> Visit Your Store </label>
                 </div>                
               </div>              
-            </motion.div>
 
-
-            <motion.div
-              ref={ref2} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
             <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 02. Target Audience </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="audiance">
@@ -290,15 +277,7 @@ const PaidAdvertisingForm = () => {
                   required
                 />
               </div>
-            </motion.div>
 
-            <motion.div
-              ref={ref3} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 03.  Ad Platforms & Budget </h1>
 
@@ -398,16 +377,7 @@ const PaidAdvertisingForm = () => {
                   required
                 />
               </div>              
-            </motion.div>
 
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 04. Ad Content & Creative </h1>
 
@@ -744,16 +714,7 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer5-3'>  Conversion Optimization </label>
                 </div>                  
               </div>
-            </motion.div>
 
-
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 06. Competitor Analysis </h1>
               <div className='pb-5'>
@@ -946,15 +907,7 @@ const PaidAdvertisingForm = () => {
                   required
                 />
               </div>             
-            </motion.div>
 
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 08. Ad Targeting Preferences </h1>
 
@@ -1145,15 +1098,7 @@ const PaidAdvertisingForm = () => {
               </div>
 
               </div>
-            </motion.div>
 
-            <motion.div
-              ref={ref4} // Attach the ref to the element
-              initial={{ y: -100, opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-              className="wow fadeInUp"
-            >
               <hr className='mt-10 mb-5'/>
               <h1 className='text-2xl font-bold py-3'> 11. Integration with Other Marketing Channels </h1>
 
@@ -1301,9 +1246,7 @@ const PaidAdvertisingForm = () => {
                   />
                   <label htmlFor='Answer12-3'>  Urgent </label>
                 </div>                           
-              </div>            
-
-                       
+              </div>                            
             </motion.div>
 
 
