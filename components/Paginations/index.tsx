@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react';
 import { WebDesign, SocialMediaManagement, PaidAdvertising, MobileAppDevelopment, Copywriting, Contentcreation } from '@/components/Roadmap';
 import { motion, useInView } from 'framer-motion';
+import Link from "next/link";
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState('webdesign');
@@ -13,9 +14,9 @@ export default function TabsComponent() {
       <div className="mt-10 m-auto container lg:px-10">
         <div className="mb-4 border-gray-700">
           <motion.div
-            ref={ref} 
+            ref={ref}
             initial={{ y: -50, opacity: 0 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} 
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
             transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
             className="wow fadeInUp"
           >
@@ -240,14 +241,13 @@ export default function TabsComponent() {
                       <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                     </div>
                     <div className='flex w-full justify-center'>
-                      <a href="/webdesignform">
+                      <Link href="/webdesignform">
                         <button className="shadow-[0_0_15px_5px_rgba(56,182,255,0.3)] bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
                           Get Started
                         </button>
-                      </a>
+                      </Link>
                     </div>
                   </motion.div>
-
                 </div>
               </>
             )}
@@ -284,9 +284,9 @@ export default function TabsComponent() {
                     <div className='pb-5'>
                       <h1 className='border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] text-center'> Introduction </h1>
                       <p className='pt-2 text-md text-gray-300 font-extralight text-justify'>
-                        At <span className='font-bold'>ROIInnovators</span>, we manage your social media so you can focus on growing your business. 
-                        We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook, 
-                        Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media 
+                        At <span className='font-bold'>ROIInnovators</span>, we manage your social media so you can focus on growing your business.
+                        We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook,
+                        Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media
                         presence, and watch your business thrive!
                       </p>
                     </div>
@@ -537,7 +537,6 @@ export default function TabsComponent() {
                       </button>
                     </div>
                   </motion.div>
-
                 </div>
               </>
             )}

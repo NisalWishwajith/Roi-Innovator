@@ -11,9 +11,9 @@ const RoadMapItem = ({ stage, goal , activities, isEven }) => {
         <h3 className="roadmap-item__stage"> {stage} </h3>     
            <dl className="text-left align-top">           
               <dl className="font-semibold"> Goal : </dl>
-              <dd className="font-extralight text-sm">  - {goal} </dd>         
+              <dd className="font-extralight text-sm">  {goal} </dd>         
               <dl className="font-semibold"> Activities : </dl>
-              <dd className="font-extralight text-sm"> - {activities} </dd>
+              <dd className="font-extralight text-sm"> {activities} </dd>
             </dl>
        
      
