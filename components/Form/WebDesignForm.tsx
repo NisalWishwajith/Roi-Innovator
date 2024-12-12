@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from 'next/link';
 
 
 const WebDesignForm = () => {
@@ -172,7 +173,8 @@ const WebDesignForm = () => {
                   />
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> 02. Website Goals </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 2. Website Goals </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="goal">
                     What are the primary goals of your website ?
@@ -200,8 +202,8 @@ const WebDesignForm = () => {
                   />
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> (04)  Core Features </h1>
-
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 3.  Core Features </h1>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="feature">
                   What core features do you need on your website ?
                 </label>
@@ -312,14 +314,14 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                   <div>
-                      <input
-                        id='cms-yes'
-                        name="Cms"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='cms-yes'
+                      name="Cms"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='cms-yes'> Yes </label>
                   </div>
 
@@ -336,7 +338,8 @@ const WebDesignForm = () => {
                   </div>
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> (04) Design & User Experience </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 4. Design & User Experience </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="preferences">
                     Do you have any specific design preferences or brand guidelines? (e.g., color schemes, fonts, logos)
@@ -400,10 +403,10 @@ const WebDesignForm = () => {
                     />
                     <label htmlFor='mobile-responsive'> Mobile Responsive </label>
                   </div>
-
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> (05) Content </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 5. Content </h1>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
                   What kind of content will be on the website?
                 </label>
@@ -459,14 +462,14 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                   <div>
-                      <input
-                        id='content-creation-yes'
-                        name="ContentCreation"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='content-creation-yes'
+                      name="ContentCreation"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='content-creation-yes'> Yes </label>
                   </div>
 
@@ -483,7 +486,8 @@ const WebDesignForm = () => {
                   </div>
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> (06) SEO Analytics </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 6. SEO Analytics </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="Seo">
                     What are the specific SEO services do you need ?
@@ -503,14 +507,14 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                   <div>
-                      <input
-                        id='tracking-yes'
-                        name="Tracking"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='tracking-yes'
+                      name="Tracking"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='tracking-yes'> Yes </label>
                   </div>
 
@@ -527,9 +531,8 @@ const WebDesignForm = () => {
                   </div>
                 </div>
 
-
-
-                <h1 className='text-2xl font-bold py-3'> (07) Security and Maintainance </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 7. Security and Maintainance </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="security">
                     What level of security is required?
@@ -549,14 +552,14 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                   <div>
-                      <input
-                        id='maintainance-yes'
-                        name="Maintainance"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='maintainance-yes'
+                      name="Maintainance"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='maintainance-yes'> Yes </label>
                   </div>
 
@@ -573,7 +576,8 @@ const WebDesignForm = () => {
                   </div>
                 </div>
 
-                <h1 className='text-2xl font-bold py-3'> (08) Timeline & Budget </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 8. Timeline & Budget </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="timeline">
                     What is your desired timeline for the project?
@@ -602,8 +606,8 @@ const WebDesignForm = () => {
                   />
                 </div>
 
-
-                <h1 className='text-2xl font-bold py-3'> (09) Additional </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 9. Additional </h1>
                 <div>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="additional">
                     Are there any additional features or special requests?
@@ -613,22 +617,22 @@ const WebDesignForm = () => {
                 </div>
 
 
-
-                <h1 className='text-2xl font-bold py-3'> (10) Hosting & Domain </h1>
+                <hr className='mt-20 mb-5' />
+                <h1 className='text-2xl font-bold py-3'> 10. Hosting & Domain </h1>
                 <div>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="assistant">
                     will you need assistance with domain name and hosting provider ?
                   </label>
                   <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
                     <div>
-                        <input
-                          id='assistant-yes'
-                          name="Assistant"
-                          type="radio"
-                          value="yes"
-                          className="w-4 h-4"
-                          required
-                        />
+                      <input
+                        id='assistant-yes'
+                        name="Assistant"
+                        type="radio"
+                        value="yes"
+                        className="w-4 h-4"
+                        required
+                      />
                       <label htmlFor='assistant-yes'> Yes </label>
                     </div>
 
@@ -697,9 +701,11 @@ const WebDesignForm = () => {
                     Send
                   </button>
 
-                  <button type="reset" className="ml-auto px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
-                    Cancel
-                  </button>
+                  <Link href='/' className='ml-auto'>
+                    <button type="reset" className="px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
+                      Cancel
+                    </button>
+                  </Link>
                 </div>
 
               </motion.div>

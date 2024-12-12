@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from 'next/link';
 
 
 const WebDesignForm = () => {
@@ -38,7 +39,8 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 0, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (1) Business Overview </h1>
+
+              <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
@@ -58,16 +60,14 @@ const WebDesignForm = () => {
               </label>
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='ecommerce'>
-                    <input
-                      id='ecommerce'
-                      name="nature"
-                      type="radio"
-                      value="e-commerce"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
+                  <input
+                    id='ecommerce'
+                    name="nature"
+                    type="radio"
+                    value="e-commerce"
+                    className="w-4 h-4"
+                    required
+                  />
                   <label htmlFor='ecommerce'> E-commerce </label>
                 </div>
 
@@ -135,7 +135,7 @@ const WebDesignForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="usp">
-                What are your unique selling points (USPs) compared to your competitors?
+                  What are your unique selling points (USPs) compared to your competitors?
                 </label>
                 <input
                   id="usp"
@@ -146,11 +146,12 @@ const WebDesignForm = () => {
                 />
               </div>
 
-              <h1 className='text-2xl font-bold py-3'> (02) Current Social Media Presence
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 2. Current Social Media Presence
               </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platform">
-              Which social media platforms are you currently using ?
+                Which social media platforms are you currently using ?
               </label>
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
@@ -203,7 +204,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="frequentlyuse">
-                How frequently do you post on each platform ?
+                  How frequently do you post on each platform ?
                 </label>
                 <textarea name="frequentlyuse" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
@@ -211,7 +212,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="activeness">
-                Do you have existing social media accounts ? and if so, how active are they?
+                  Do you have existing social media accounts ? and if so, how active are they?
                 </label>
                 <input
                   id="activeness"
@@ -224,7 +225,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="manageperson">
-                Who currently manages your social media accounts ?
+                  Who currently manages your social media accounts ?
                 </label>
                 <input
                   id="manageperson"
@@ -236,7 +237,7 @@ const WebDesignForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
-              What types of content have you been sharing ?
+                What types of content have you been sharing ?
               </label>
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
@@ -285,12 +286,12 @@ const WebDesignForm = () => {
                 </div>
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (03) Goals & Objectives
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 03. Goals & Objectives
               </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="primarygoal">
-              What are your primary goals for social media?
+                What are your primary goals for social media?
               </label>
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
@@ -309,7 +310,7 @@ const WebDesignForm = () => {
 
                 <div>
                   <input
-                    id=' lead_generation'
+                    id='lead_generation'
                     name="feature"
                     type="checkbox"
                     value=" lead_generation"
@@ -355,18 +356,18 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="campaign">
-                Are there any specific campaigns or promotions you want to focus on?
+                  Are there any specific campaigns or promotions you want to focus on?
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                      <input
-                        id='campaign-yes'
-                        name="campaign"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='campaign-yes'
+                      name="campaign"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='campaign-yes'> Yes </label>
                   </div>
 
@@ -386,18 +387,18 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="traffic">
-                Do you want to grow your followers, increase engagement, or drive traffic to your website?
+                  Do you want to grow your followers, increase engagement, or drive traffic to your website?
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                      <input
-                        id='traffic-yes'
-                        name="traffic"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='traffic-yes'
+                      name="traffic"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='traffic-yes'> Yes </label>
                   </div>
 
@@ -413,11 +414,11 @@ const WebDesignForm = () => {
                     <label htmlFor='traffic-no'> No </label>
                   </div>
                 </div>
-              </div>  
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="onjectives">
-                What are your long-term objectives with social media?
+                  What are your long-term objectives with social media?
                 </label>
                 <input
                   id="onjectives"
@@ -428,12 +429,12 @@ const WebDesignForm = () => {
                 />
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (04) Content Strategy
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 4. Content Strategy
               </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-              What types of content do you think resonate most with your audience?
+                What types of content do you think resonate most with your audience?
               </label>
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
@@ -498,18 +499,18 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="person">
-                do you have someone who takes photos, writes posts, creates graphics?
+                  do you have someone who takes photos, writes posts, creates graphics?
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                      <input
-                        id='person-yes'
-                        name="person"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='person-yes'
+                      name="person"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='person-yes'> Yes </label>
                   </div>
 
@@ -529,19 +530,19 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="assistant">
-                Would you like assistance with content creation? (ex:- photography, video production, graphic design)
+                  Would you like assistance with content creation? (ex:- photography, video production, graphic design)
 
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                      <input
-                        id='assistant-yes'
-                        name="assistant"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='assistant-yes'
+                      name="assistant"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='assistant-yes'> Yes </label>
                   </div>
 
@@ -557,11 +558,11 @@ const WebDesignForm = () => {
                     <label htmlFor='assistant-no'> No </label>
                   </div>
                 </div>
-              </div>  
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="posttimes">
-                How often would you like to post? (daily, weekly, etc.)
+                  How often would you like to post? (daily, weekly, etc.)
                 </label>
                 <input
                   id="posttimes"
@@ -573,24 +574,24 @@ const WebDesignForm = () => {
               </div>
 
 
-              
-              <h1 className='text-2xl font-bold py-3'> (05)  Branding & Voice
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 5. Branding & Voice
               </h1>
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="guidline">
-                Do you have established brand guidelines ? (e.g., color schemes, fonts, logos)
+                  Do you have established brand guidelines ? (e.g., color schemes, fonts, logos)
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                      <input
-                        id='guidline-yes'
-                        name="guidline"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
+                    <input
+                      id='guidline-yes'
+                      name="guidline"
+                      type="radio"
+                      value="yes"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='guidline-yes'> Yes </label>
                   </div>
 
@@ -610,7 +611,7 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tone">
-                How would you describe your brand’s voice and tone? 
+                  How would you describe your brand’s voice and tone?
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
@@ -656,18 +657,18 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="message">
-                Are there any specific messages or themes you want to convey consistently ?
+                  Are there any specific messages or themes you want to convey consistently ?
                 </label>
                 <textarea name="message" placeholder='if no , type "none"' className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (06) Audience Engagement
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 6. Audience Engagement
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="engage">
-                How do you currently engage with your audience? (ex:- Responding to Comments, Direct Messages, Running Polls)
+                  How do you currently engage with your audience? (ex:- Responding to Comments, Direct Messages, Running Polls)
                 </label>
                 <input
                   id="engage"
@@ -680,38 +681,38 @@ const WebDesignForm = () => {
 
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="plan">
-              Do you have a plan for handling customer inquiries and feedback on social media?
-                </label>
-                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
-                  <div>
-                      <input
-                        id='plan-yes'
-                        name="campaign"
-                        type="radio"
-                        value="yes"
-                        className="w-4 h-4"
-                        required
-                      />
-                    <label htmlFor='plan-yes'> Yes </label>
-                  </div>
+                Do you have a plan for handling customer inquiries and feedback on social media?
+              </label>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
+                <div>
+                  <input
+                    id='plan-yes'
+                    name="campaign"
+                    type="radio"
+                    value="yes"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='plan-yes'> Yes </label>
+                </div>
 
-                  <div>
-                    <input
-                      id='plan-no'
-                      name="campaign"
-                      type="radio"
-                      value="no"
-                      className="w-4 h-4"
-                      required
-                    />
-                    <label htmlFor='plan-no'> No </label>
-                  </div>
-                  </div>
+                <div>
+                  <input
+                    id='plan-no'
+                    name="campaign"
+                    type="radio"
+                    value="no"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='plan-no'> No </label>
+                </div>
+              </div>
 
 
-                  <div className='pb-5'>
+              <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="challenges">
-                Are there any challenges you face with audience engagement?
+                  Are there any challenges you face with audience engagement?
                 </label>
                 <input
                   id="challenges"
@@ -722,12 +723,12 @@ const WebDesignForm = () => {
                 />
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (07). Advertising & Promotions
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 7. Advertising & Promotions
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="campaign">
-                Have you run any paid advertising campaigns on social media before? If so, how did they perform ?
+                  Have you run any paid advertising campaigns on social media before? If so, how did they perform ?
                 </label>
                 <input
                   id="campaign"
@@ -740,9 +741,9 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
-                What is your budget for social media advertising?
+                  What is your budget for social media advertising?
                 </label>
-                <span className=''> LKR </span>
+                <span className=''> EURO </span>
                 <input
                   id="budget"
                   name="budget"
@@ -750,12 +751,11 @@ const WebDesignForm = () => {
                   className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
                 />
-                 <span className=''> /= </span>
               </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="upcomingpromotion">
-                Do you have any upcoming promotions or events you want to highlight?
+                  Do you have any upcoming promotions or events you want to highlight?
                 </label>
                 <input
                   id="upcomingpromotion"
@@ -767,12 +767,12 @@ const WebDesignForm = () => {
               </div>
 
 
-
-              <h1 className='text-2xl font-bold py-3'> (08). Competitor Analysis
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 8. Competitor Analysis
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitor">
-                Who are your main competitors, and how are they using social media?
+                  Who are your main competitors, and how are they using social media?
                 </label>
                 <input
                   id="competitor"
@@ -785,7 +785,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there any specific competitors whose social media presence you admire?
+                  Are there any specific competitors whose social media presence you admire?
                 </label>
                 <input
                   id="competitors"
@@ -798,7 +798,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="differentiate">
-                What differentiates your business from your competitors on social media?
+                  What differentiates your business from your competitors on social media?
                 </label>
                 <input
                   id="differentiate"
@@ -809,10 +809,11 @@ const WebDesignForm = () => {
                 />
               </div>
 
-              <h1 className='text-2xl font-bold py-3'> (09). Measurement & Reporting
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 9. Measurement & Reporting
               </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="kpi">
-              What key performance indicators (KPIs) are most important to you?
+                What key performance indicators (KPIs) are most important to you?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -826,7 +827,7 @@ const WebDesignForm = () => {
                       required
                     />
                   </label>
-                  <label htmlFor='kpi'> Click-Through Rate (CTR) </label>
+                  <label htmlFor='click-through-rate'> Click-Through Rate (CTR) </label>
                 </div>
 
                 <div>
@@ -838,8 +839,8 @@ const WebDesignForm = () => {
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='kpi'>  Engagement Rate </label>
-                </div>   
+                  <label htmlFor='engagement-rate'>  Engagement Rate </label>
+                </div>
 
                 <div>
                   <input
@@ -850,12 +851,12 @@ const WebDesignForm = () => {
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='kpi'>  Follower Growth </label>
-                </div>                 
+                  <label htmlFor='follower-growth'>  Follower Growth </label>
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="performance">
-              How frequently do you want to receive performance reports ?
+                How frequently do you want to receive performance reports ?
               </label>
               <div className='grid md:grid-cols-3 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -869,7 +870,7 @@ const WebDesignForm = () => {
                       required
                     />
                   </label>
-                  <label htmlFor='kpi'> Weekly </label>
+                  <label htmlFor='weekly'> Weekly </label>
                 </div>
 
                 <div>
@@ -881,8 +882,8 @@ const WebDesignForm = () => {
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='kpi'>  Bi-Weekly </label>
-                </div>  
+                  <label htmlFor='bi-weekly'>  Bi-Weekly </label>
+                </div>
 
                 <div>
                   <input
@@ -893,25 +894,25 @@ const WebDesignForm = () => {
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='kpi'>  Monthly </label>
-                </div>          
+                  <label htmlFor='monthly'>  Monthly </label>
+                </div>
               </div>
 
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="metrics">
-              What metrics would you like to focus on?
+                What metrics would you like to focus on?
               </label>
 
               <div className='grid md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
-                    <input
-                      id='ROI'
-                      name="feature"
-                      type="checkbox"
-                      value="ROI"
-                      className="w-4 h-4"
-                    />          
-                  <label htmlFor='metrics'> ROI </label>
+                  <input
+                    id='ROI'
+                    name="feature"
+                    type="checkbox"
+                    value="ROI"
+                    className="w-4 h-4"
+                  />
+                  <label htmlFor='ROI'> ROI </label>
                 </div>
 
                 <div>
@@ -922,7 +923,7 @@ const WebDesignForm = () => {
                     value="conversion-rate"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='metrics'> Conversion Rate </label>
+                  <label htmlFor='conversion-rate'> Conversion Rate </label>
                 </div>
 
                 <div>
@@ -932,17 +933,17 @@ const WebDesignForm = () => {
                     type="checkbox"
                     value="reach"
                     className="w-4 h-4"
-                  />  
-                  <label htmlFor='metrics'> Reach </label>
+                  />
+                  <label htmlFor='reach'> Reach </label>
                 </div>
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (10). Budget & Resources
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 10. Budget & Resources
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="socialmediabudget">
-                What is your budget for social media management?
+                  What is your budget for social media management?
                 </label>
                 <input
                   id="socialmediabudget"
@@ -955,7 +956,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="strategy">
-                Are there any resources you can provide to support your social media strategy? (e.g., product images, customer testimonials)
+                  Are there any resources you can provide to support your social media strategy? (e.g., product images, customer testimonials)
                 </label>
                 <input
                   id="strategy"
@@ -968,7 +969,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tools">
-                Do you have any specific tools or software you prefer to use?
+                  Do you have any specific tools or software you prefer to use?
                 </label>
                 <input
                   id="tools"
@@ -979,8 +980,8 @@ const WebDesignForm = () => {
                 />
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (11). Future Plans
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 11. Future Plans
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="new-product">
@@ -997,7 +998,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
-                Do you have any seasonal promotions or events that should be highlighted?
+                  Do you have any seasonal promotions or events that should be highlighted?
                 </label>
                 <input
                   id="promotion"
@@ -1010,7 +1011,7 @@ const WebDesignForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="presence">
-                How do you see your social media presence evolving in the next 6-12 months?
+                  How do you see your social media presence evolving in the next 6-12 months?
                 </label>
                 <input
                   id="presence"
@@ -1021,8 +1022,8 @@ const WebDesignForm = () => {
                 />
               </div>
 
-
-              <h1 className='text-2xl font-bold py-3'> (12). Additional Preferences
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 12. Additional Preferences
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platforms">
@@ -1063,27 +1064,17 @@ const WebDesignForm = () => {
                 />
               </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
               <div className="flex items-center my-5">
-                <button type="submit" className="px-8 py-2 bg-blue-600 rounded hover:opacity-90 hover:scale-105 transition duration-200 ">
-                  Send
-                </button>
+                  <button type="submit" className="px-8 py-2 bg-blue-600 rounded hover:opacity-90 hover:scale-105 transition duration-200 ">
+                    Send
+                  </button>
 
-                <button type="reset" className="ml-auto px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
-                  Cancel
-                </button>
-              </div>
+                  <Link href='/' className='ml-auto'>
+                    <button type="reset" className="px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
+                      Cancel
+                    </button>
+                  </Link>
+                </div>
 
             </motion.div>
           </form >

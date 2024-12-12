@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from 'next/link';
 
 
 const CopyWritingForm = () => {
@@ -11,7 +12,7 @@ const CopyWritingForm = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  
+
   // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
@@ -34,7 +35,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What are your primary goals for the copywriting project?
+                  What are your primary goals for the copywriting project?
                 </label>
                 <input
                   id="company"
@@ -48,7 +49,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What specific outcomes do you expect from the copy?
+                  What specific outcomes do you expect from the copy?
                 </label>
                 <input
                   id="company"
@@ -62,7 +63,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What are the key messages or themes you want the copy to convey?
+                  What are the key messages or themes you want the copy to convey?
                 </label>
                 <input
                   id="company"
@@ -74,12 +75,12 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 02. Target Audience </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 2. Target Audience </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                Who is your target audience for this copy?
+                  Who is your target audience for this copy?
                 </label>
                 <input
                   id="company"
@@ -93,7 +94,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What are the key concerns or problems of your target audience that the copy should address?
+                  What are the key concerns or problems of your target audience that the copy should address?
                 </label>
                 <input
                   id="company"
@@ -107,7 +108,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What tone or style will resonate best with your audience?
+                  What tone or style will resonate best with your audience?
                 </label>
                 <input
                   id="company"
@@ -119,12 +120,12 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 03.  Brand Voice & Tone </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 3.  Brand Voice & Tone </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                How would you describe your brand’s voice?
+                  How would you describe your brand’s voice?
                 </label>
                 <input
                   id="company"
@@ -138,7 +139,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                Do you have existing brand guidelines that the copy should align with?
+                  Do you have existing brand guidelines that the copy should align with?
                 </label>
                 <input
                   id="company"
@@ -152,7 +153,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                Are there any specific words, phrases, or terminology that should be used or avoided?
+                  Are there any specific words, phrases, or terminology that should be used or avoided?
                 </label>
                 <input
                   id="company"
@@ -164,12 +165,12 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 04. Types of Copy </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 4. Types of Copy </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What types of copy do you need?
+                  What types of copy do you need?
                 </label>
                 <input
                   id="company"
@@ -183,7 +184,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                Do you have existing content that needs to be revised or rewritten?
+                  Do you have existing content that needs to be revised or rewritten?
                 </label>
                 <input
                   id="company"
@@ -197,7 +198,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                Are there any specific topics or themes you want to focus on?
+                  Are there any specific topics or themes you want to focus on?
                 </label>
                 <input
                   id="company"
@@ -210,7 +211,7 @@ const CopyWritingForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
-              What type of ad content do you prefer?
+                What type of ad content do you prefer?
               </label>
 
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
@@ -273,7 +274,7 @@ const CopyWritingForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="creative">
-              Do you have any existing creatives or do you need us to design them?
+                Do you have any existing creatives or do you need us to design them?
               </label>
 
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
@@ -314,7 +315,7 @@ const CopyWritingForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="cta">
-              What messaging or call-to-action (CTA) do you want in your ads?
+                What messaging or call-to-action (CTA) do you want in your ads?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -341,7 +342,7 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> Learn More </label>
-                </div>    
+                </div>
 
                 <div>
                   <input
@@ -353,7 +354,7 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer3'> Sign Up </label>
-                </div>                   
+                </div>
               </div>
 
               <div className='pb-5'>
@@ -370,7 +371,7 @@ const CopyWritingForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
-                Are there any specific promotions, products, or services you want to highlight?
+                  Are there any specific promotions, products, or services you want to highlight?
                 </label>
                 <input
                   id="promotion"
@@ -382,14 +383,14 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              
 
 
-            {/* this is the fifth section */}
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 05. Content Structure & Format </h1>
+
+              {/* this is the fifth section */}
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 5. Content Structure & Format </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="offers">
-              Do you have a preferred length for the copy?
+                Do you have a preferred length for the copy?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -416,11 +417,11 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> In-depth </label>
-                </div>                
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="offers">
-              Are there any specific formats or structures you want to follow?
+                Are there any specific formats or structures you want to follow?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -447,7 +448,7 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'>  FAQs </label>
-                </div>   
+                </div>
 
                 <div>
                   <input
@@ -459,12 +460,12 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'>  Listicles </label>
-                </div>                
+                </div>
               </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
-                Do you need SEO-optimized copy?
+                  Do you need SEO-optimized copy?
                 </label>
                 <input
                   id="promotion"
@@ -478,7 +479,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
-                Should the copy include any specific calls-to-action (CTAs)?
+                  Should the copy include any specific calls-to-action (CTAs)?
                 </label>
                 <input
                   id="promotion"
@@ -490,11 +491,11 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 06. Competitor Analysis </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 6. Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there any competitors whose copywriting you admire?(What do you like about their approach?)
+                  Are there any competitors whose copywriting you admire?(What do you like about their approach?)
                 </label>
                 <input
                   id="competitors"
@@ -505,31 +506,31 @@ const CopyWritingForm = () => {
                   required
                 />
               </div>
-              
+
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Are there any content pieces, articles, or websites that serve as inspiration for the style or tone you want?
+                  Are there any content pieces, articles, or websites that serve as inspiration for the style or tone you want?
                 </label>
                 <textarea name="Customer_Needs" placeholder=" Type here the answer  " className='placeholder-slate-700 p-2 md:p-3 w-full h-30 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
-              </div>    
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Do you have testimonials, case studies, or customer stories that should be included?
+                  Do you have testimonials, case studies, or customer stories that should be included?
                 </label>
                 <textarea name="Other_Includings" placeholder=" Type here the answer  " className='placeholder-slate-700 p-2 md:p-3 w-full h-30 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
-              </div>   
+              </div>
 
-              
-            {/* this is seventh section */}
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 07. Existing Content & References </h1>
+
+              {/* this is seventh section */}
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 7. Existing Content & References </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you have any existing copy or materials that should be referenced or integrated?
+                  Do you have any existing copy or materials that should be referenced or integrated?
                 </label>
                 <input
                   id="Existing_Copytointegrate"
@@ -543,7 +544,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there any content pieces, articles, or websites that serve as inspiration for the style or tone you want?
+                  Are there any content pieces, articles, or websites that serve as inspiration for the style or tone you want?
                 </label>
                 <input
                   id="Inspiration_Styles"
@@ -557,7 +558,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you have testimonials, case studies, or customer stories that should be included?
+                  Do you have testimonials, case studies, or customer stories that should be included?
                 </label>
                 <input
                   id="Testimonials_Or_Case_Studies"
@@ -569,12 +570,12 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 08. Approval & Feedback Process </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 8. Approval & Feedback Process </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Who will be responsible for reviewing and approving the copy?
+                  Who will be responsible for reviewing and approving the copy?
                 </label>
                 <input
                   id="Responsible_Parties"
@@ -588,7 +589,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                What is your preferred feedback and revision process?
+                  What is your preferred feedback and revision process?
                 </label>
                 <input
                   id="Feedback_Process"
@@ -602,7 +603,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there any specific deadlines or timelines we need to adhere to?
+                  Are there any specific deadlines or timelines we need to adhere to?
                 </label>
                 <input
                   id="Specific_Deadlines"
@@ -615,13 +616,13 @@ const CopyWritingForm = () => {
               </div>
 
 
-            {/* this is nineth section */}
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 09. Legal & Compliance Considerations </h1>
+              {/* this is nineth section */}
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 9. Legal & Compliance Considerations </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there any legal or compliance requirements the copy needs to meet?
+                  Are there any legal or compliance requirements the copy needs to meet?
                 </label>
                 <input
                   id="Legal_Requirments"
@@ -635,7 +636,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you have specific terms, conditions, or privacy policies that need to be included?
+                  Do you have specific terms, conditions, or privacy policies that need to be included?
                 </label>
                 <input
                   id="Specific_Conditions"
@@ -647,12 +648,12 @@ const CopyWritingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 10. Performance & Measurement </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                How will you measure the success of the copy?
+                  How will you measure the success of the copy?
                 </label>
                 <input
                   id="Measurement_Of_Success"
@@ -666,7 +667,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you have any performance metrics from past content that we can review?
+                  Do you have any performance metrics from past content that we can review?
                 </label>
                 <input
                   id="Past_Performance_Metrics"
@@ -680,7 +681,7 @@ const CopyWritingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Are there specific metrics you want to improve through the new copy?
+                  Are there specific metrics you want to improve through the new copy?
                 </label>
                 <input
                   id="Specific_Metrics"
@@ -693,11 +694,11 @@ const CopyWritingForm = () => {
               </div>
 
 
-              <hr className='mt-5 mb-5'/>
+              <hr className='mt-5 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 11. Additional Preferences </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="offers">
-              Are there any particular writing styles or techniques you prefer?
+                Are there any particular writing styles or techniques you prefer?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -724,7 +725,7 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'>  Persuasive Writing </label>
-                </div>   
+                </div>
 
                 <div>
                   <input
@@ -736,12 +737,12 @@ const CopyWritingForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'>  Educational Content </label>
-                </div>                
+                </div>
               </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="paidadd">
-                Do you have a preferred voice for certain types of content?
+                  Do you have a preferred voice for certain types of content?
                 </label>
                 <input
                   id="Preferred_Voice_For_Content"
@@ -752,14 +753,14 @@ const CopyWritingForm = () => {
                   required
                 />
               </div>
-              
-            {/* this is twelveth section */}
-            <hr className='mt-10 mb-5'/>
+
+              {/* this is twelveth section */}
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 12. Budget & Resources </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="creativeideas">
-                What is your budget for the copywriting project?
+                  What is your budget for the copywriting project?
                 </label>
                 <input
                   id="Budget"
@@ -770,11 +771,11 @@ const CopyWritingForm = () => {
                   placeholder='Enter the amount'
                   required
                 />
-              </div>    
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-                Do you have any resources or tools that should be used?
+                  Do you have any resources or tools that should be used?
                 </label>
                 <input
                   id="Used_Resources"
@@ -784,11 +785,11 @@ const CopyWritingForm = () => {
                   placeholder='e.g. style guides, content management systems'
                   required
                 />
-              </div> 
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-                Are there any additional services you might need related to copywriting?
+                  Are there any additional services you might need related to copywriting?
                 </label>
                 <input
                   id="Additional_Services"
@@ -798,7 +799,21 @@ const CopyWritingForm = () => {
                   placeholder='e.g. content strategy, editing, proofreading'
                   required
                 />
-              </div>                 
+              </div>
+
+
+              <div className="flex items-center my-5">
+                  <button type="submit" className="px-8 py-2 bg-blue-600 rounded hover:opacity-90 hover:scale-105 transition duration-200 ">
+                    Send
+                  </button>
+
+                  <Link href='/' className='ml-auto'>
+                    <button type="reset" className="px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
+                      Cancel
+                    </button>
+                  </Link>
+                </div>
+
             </motion.div>
           </form >
         </div >

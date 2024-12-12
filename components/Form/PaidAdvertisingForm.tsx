@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from 'next/link';
 
 
 const PaidAdvertisingForm = () => {
@@ -11,7 +12,7 @@ const PaidAdvertisingForm = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  
+
   // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
@@ -32,7 +33,7 @@ const PaidAdvertisingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What is the name of Company/Business ?
+                  What is the name of Company/Business ?
                 </label>
                 <input
                   id="company"
@@ -45,215 +46,209 @@ const PaidAdvertisingForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="primarygoal">
-              What are your primary goals for running paid ads?
+                What are your primary goals for running paid ads?
               </label>
               <div className='grid grid-cols-1 pb-10 gap-1'>
                 <div>
-                    <input
-                      id='answer1'
-                      name="Primary_Goal"
-                      type="radio"
-                      value="Increasing Brand Awareness"
-                      className="w-4 h-4"
-                      required
-                    />
-                  <label htmlFor='Answer1'> Increasing Brand Awareness </label>
+                  <input
+                    id='primarygoal-1'
+                    name="Primary_Goal"
+                    type="radio"
+                    value="Increasing Brand Awareness"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='primarygoal-1'> Increasing Brand Awareness </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='primarygoal-2'
                     name="Primary_Goal"
                     type="radio"
                     value="Driving Website Traffic"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Driving Website Traffic </label>
+                  <label htmlFor='primarygoal-2'> Driving Website Traffic </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='primarygoal-3'
                     name="Primary_Goal"
                     type="radio"
                     value="Generating Leads"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer3'> Generating Leads </label>
+                  <label htmlFor='primarygoal-3'> Generating Leads </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer4'
+                    id='primarygoal-4'
                     name="Primary_Goal"
                     type="radio"
                     value="Boosting Sales"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer4'> Boosting Sales </label>
+                  <label htmlFor='primarygoal-4'> Boosting Sales </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5'
+                    id='primarygoal-5'
                     name="Primary_Goal"
                     type="radio"
                     value="Promoting Specific Products/Services"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5'> Promoting Specific Products/Services </label>
+                  <label htmlFor='primarygoal-5'> Promoting Specific Products/Services </label>
                 </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="secondarygoal">
-              Are there any secondary goals you want to achieve?
+                Are there any secondary goals you want to achieve?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='answer1'
-                      name="Secondary_Goal"
-                      type="radio"
-                      value="Growing Social Media Followers"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Growing Social Media Followers </label>
+                  <input
+                    id='secondarygoal-1'
+                    name="Secondary_Goal"
+                    type="radio"
+                    value="Growing Social Media Followers"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='secondarygoal-1'> Growing Social Media Followers </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='secondarygoal-2'
                     name="Secondary_Goal"
                     type="radio"
                     value="Building an Email List"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Building an Email List </label>
-                </div>               
+                  <label htmlFor='secondarygoal-2'> Building an Email List </label>
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="action">
-              What actions do you want users to take after seeing your ads? 
+                What actions do you want users to take after seeing your ads ?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='answer1'
-                      name="Action"
-                      type="radio"
-                      value="Make a Purchase"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Make a Purchase </label>
+                  <input
+                    id='action-1'
+                    name="Action"
+                    type="radio"
+                    value="Make a Purchase"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='action-1'> Make a Purchase </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='action-2'
                     name="Action"
                     type="radio"
                     value="Sign-Up for a Newsletter"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Sign-Up for a Newsletter </label>
-                </div>      
+                  <label htmlFor='action-2'> Sign-Up for a Newsletter </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='action-3'
                     name="Action"
                     type="radio"
                     value="Visit Your Store"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer3'> Visit Your Store </label>
-                </div>                
-              </div>              
+                  <label htmlFor='action-3'> Visit Your Store </label>
+                </div>
+              </div>
 
-            <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 02. Target Audience </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="audiance">
-              Who is your target audience for these ads? 
+                Who is your target audience for these ads?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='answer1'
-                      name="Target_Audience"
-                      type="radio"
-                      value="Age"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Age </label>
+                  <input
+                    id='audiance-1'
+                    name="Target_Audience"
+                    type="checkbox"
+                    value="Age"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='audiance-1'> Age </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='audiance-2'
                     name="Target_Audience"
-                    type="radio"
+                    type="checkbox"
                     value="Gender"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Gender </label>
-                </div>      
+                  <label htmlFor='audiance-2'> Gender </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='audiance-3'
                     name="Target_Audience"
-                    type="radio"
+                    type="checkbox"
                     value="Location"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer3'> Location </label>
-                </div>    
+                  <label htmlFor='audiance-3'> Location </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer4'
+                    id='audiance-4'
                     name="Target_Audience"
-                    type="radio"
+                    type="checkbox"
                     value="Interests"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer4'> Interests </label>
-                </div>     
+                  <label htmlFor='audiance-4'> Interests </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer5'
+                    id='audiance-5'
                     name="Target_Audience"
-                    type="radio"
+                    type="checkbox"
                     value="Buying Behaviour"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5'> Buying Behaviour </label>
-                </div>                 
-              </div>              
+                  <label htmlFor='audiance-5'> Buying Behaviour </label>
+                </div>
+              </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                Do you have any customer personas or data on your ideal customers?
+                  Do you have any customer personas or data on your ideal customers?
                 </label>
                 <input
                   id="persona"
@@ -266,7 +261,7 @@ const PaidAdvertisingForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="demographics">
-                Are there any specific demographics or groups you want to exclude from your ads?
+                  Are there any specific demographics or groups you want to exclude from your ads?
                 </label>
                 <input
                   id="demographics"
@@ -278,11 +273,11 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 03.  Ad Platforms & Budget </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platform">
-              Which platforms do you want to run your ads on?
+                Which platforms do you want to run your ads on?
               </label>
 
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
@@ -333,40 +328,23 @@ const PaidAdvertisingForm = () => {
                 </div>
               </div>
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
-              What is your monthly budget for paid ads?
-              </label>
-              <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
-                <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='answer1'
-                      name="Monthly_Budget"
-                      type="radio"
-                      value="Total Budget"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Total Budget </label>
-                </div>
-
-                <div>
-                  <input
-                    id='Answer2'
-                    name="Monthly_Budget"
-                    type="radio"
-                    value="Budget per Platform"
-                    className="w-4 h-4"
-                    required
-                  />
-                  <label htmlFor='Answer2'> Budget per Platform </label>
-                </div>                     
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                  What is your budget for social media advertising?
+                </label>
+                <span className=''> EURO </span>
+                <input
+                  id="budget"
+                  name="budget"
+                  type="number"
+                  className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
               </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="ads">
-                Have you run paid ads before?<span className='font-light'>(If so, what was your budget and how did they perform?)</span>
+                  Have you run paid ads before?<span className='font-light'>(If so, what was your budget and how did they perform?)</span>
                 </label>
                 <input
                   id="ads"
@@ -376,156 +354,150 @@ const PaidAdvertisingForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
                 />
-              </div>              
+              </div>
 
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 04. Ad Content & Creative </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
-              What type of ad content do you prefer?
+                What type of ad content do you prefer?
               </label>
 
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer1'
-                      name="Ad_Content_Type"
-                      type="checkbox"
-                      value="Images"
-                      className="w-4 h-4"
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Images </label>
+                  <input
+                    id='content-1'
+                    name="Ad_Content_Type"
+                    type="checkbox"
+                    value="Images"
+                    className="w-4 h-4"
+                  />
+                  <label htmlFor='content-1'> Images </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='content-2'
                     name="Ad_Content_Type"
                     type="checkbox"
                     value="Videos"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer2'> Videos </label>
+                  <label htmlFor='content-2'> Videos </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='content-3'
                     name="Ad_Content_Type"
                     type="checkbox"
                     value="Carousels"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer3'> Carousels </label>
+                  <label htmlFor='content-3'> Carousels </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer4'
+                    id='content-4'
                     name="Ad_Content_Type"
                     type="checkbox"
                     value="Slideshows"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer4'> Slideshows </label>
+                  <label htmlFor='content-4'> Slideshows </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5'
+                    id='content-5'
                     name="Ad_Content_Type"
                     type="checkbox"
                     value="Stories"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer5'> Stories </label>
+                  <label htmlFor='content-5'> Stories </label>
                 </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="creative">
-              Do you have any existing creatives or do you need us to design them?
+                Do you have any existing creatives or do you need us to design them?
               </label>
 
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer1'
-                      name="Creative"
-                      type="checkbox"
-                      value="Product Photos"
-                      className="w-4 h-4"
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Product Photos </label>
+                  <input
+                    id='creative-1'
+                    name="Creative"
+                    type="checkbox"
+                    value="Product Photos"
+                    className="w-4 h-4"
+                  />
+                  <label htmlFor='creative-1'> Product Photos </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='creative-2'
                     name="Creative"
                     type="checkbox"
                     value="Videos"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer2'> Videos </label>
+                  <label htmlFor='creative-2'> Videos </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='creative-3'
                     name="Creative"
                     type="checkbox"
                     value="Graphic design"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer3'> Graphic design </label>
+                  <label htmlFor='creative-3'> Graphic design </label>
                 </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="cta">
-              What messaging or call-to-action (CTA) do you want in your ads?
+                What messaging or call-to-action (CTA) do you want in your ads?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer1'
-                      name="CTA"
-                      type="radio"
-                      value="Shop Now"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Shop Now </label>
+                  <input
+                    id='cta-1'
+                    name="CTA"
+                    type="radio"
+                    value="Shop Now"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='cta-1'> Shop Now </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='cta-2'
                     name="CTA"
                     type="radio"
                     value="Learn More"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Learn More </label>
-                </div>    
+                  <label htmlFor='cta-2'> Learn More </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='cta-3'
                     name="CTA"
                     type="radio"
                     value="Sign Up"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer3'> Sign Up </label>
-                </div>                   
+                  <label htmlFor='cta-3'> Sign Up </label>
+                </div>
               </div>
 
               <div className='pb-5'>
@@ -542,7 +514,7 @@ const PaidAdvertisingForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
-                Are there any specific promotions, products, or services you want to highlight?
+                  Are there any specific promotions, products, or services you want to highlight?
                 </label>
                 <input
                   id="promotion"
@@ -554,132 +526,128 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              
 
 
-            {/* this is the fifth section */}
-            <hr className='mt-10 mb-5'/>
+
+              {/* this is the fifth section */}
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 05. Campaign Strategy </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="offers">
-              Do you have any specific offers or promotions to include in the ad campaign?
+                Do you have any specific offers or promotions to include in the ad campaign?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer1'
-                      name="Offers"
-                      type="radio"
-                      value="Discounts"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer1'> Discounts </label>
+                  <input
+                    id='offers-1'
+                    name="Offers"
+                    type="radio"
+                    value="Discounts"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='offers-1'> Discounts </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer2'
+                    id='offers-2'
                     name="Offers"
                     type="radio"
                     value="Free Trials"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer2'> Free Trials </label>
-                </div>    
+                  <label htmlFor='offers-2'> Free Trials </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer3'
+                    id='offers-3'
                     name="Offers"
                     type="radio"
                     value="Limited-Time Offers"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer3'> Limited-Time Offers </label>
-                </div>                   
+                  <label htmlFor='offers-3'> Limited-Time Offers </label>
+                </div>
               </div>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="focus">
-              Are there any particular dates or events you want to focus on?
+                Are there any particular dates or events you want to focus on?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
                   <input
-                    id='Answer5-1'
+                    id='focus-1'
                     name="FocusedOn"
                     type="checkbox"
                     value="Holiday Sales"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5-1'> Holiday Sales </label>
+                  <label htmlFor='focus-1'> Holiday Sales </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5-2'
+                    id='focus-2'
                     name="FocusedOn"
                     type="checkbox"
                     value="Local Events"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer5-2'>  Local Events </label>
+                  <label htmlFor='focus-2'>  Local Events </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5-3'
+                    id='focus-3'
                     name="FocusedOn"
                     type="checkbox"
                     value="Product Launches"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='Answer5-3'> Product Launches </label>
+                  <label htmlFor='focus-3'> Product Launches </label>
                 </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="frequencyads">
-              What is the desired frequency for the ads?
+                What is the desired frequency for the ads?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer5-1'
-                      name="Frequency_Ads"
-                      type="radio"
-                      value="Always-on Campaigns"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer5-1'> Always-on Campaigns </label>
+                  <input
+                    id='frequencyads-1'
+                    name="Frequency_Ads"
+                    type="radio"
+                    value="Always-on Campaigns"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='frequencyads-1'> Always-on Campaigns </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5-2'
+                    id='frequencyads-2'
                     name="Frequency_Ads"
                     type="radio"
                     value="Seasonal Campaigns"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5-2'>  Seasonal Campaigns </label>
-                </div>                  
+                  <label htmlFor='frequencyads-2'>  Seasonal Campaigns </label>
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="strategy">
-              Do you have a preferred bidding strategy?
+                Do you have a preferred bidding strategy?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
                   <label htmlFor='Answer1'>
                     <input
-                      id='Answer5-1'
+                      id='strategy-1'
                       name="Preferred_Bidding_Strategy"
                       type="radio"
                       value="Cost per Click (CPC)"
@@ -687,39 +655,39 @@ const PaidAdvertisingForm = () => {
                       required
                     />
                   </label>
-                  <label htmlFor='Answer5-1'> Cost per Click (CPC) </label>
+                  <label htmlFor='strategy-1'> Cost per Click (CPC) </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer5-2'
+                    id='strategy-2'
                     name="strategy"
                     type="radio"
                     value="Cost per Thousand Impressions"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5-2'>  Cost per Thousand Impressions </label>
-                </div>   
+                  <label htmlFor='strategy-2'>  Cost per Thousand Impressions </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer5-3'
+                    id='strategy-3'
                     name="strategy"
                     type="radio"
                     value="Conversion Optimization"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer5-3'>  Conversion Optimization </label>
-                </div>                  
+                  <label htmlFor='strategy-3'>  Conversion Optimization </label>
+                </div>
               </div>
 
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 06. Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Who are your main competitors, and have you observed their advertising strategies?
+                  Who are your main competitors, and have you observed their advertising strategies?
                 </label>
                 <input
                   id="competitors"
@@ -733,7 +701,7 @@ const PaidAdvertisingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="admire">
-                    Are there any specific competitors whose ads you admire?
+                  Are there any specific competitors whose ads you admire?
                 </label>
                 <input
                   id="admire"
@@ -747,7 +715,7 @@ const PaidAdvertisingForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competition">
-                How do you want your ads to stand out from the competition?
+                  How do you want your ads to stand out from the competition?
                 </label>
                 <input
                   id="competition"
@@ -759,74 +727,72 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              
-            {/* this is seventh section */}
-            <hr className='mt-10 mb-5'/>
+
+              {/* this is seventh section */}
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 07. Tracking & Performance Metrics </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="kpi">
-              What key performance indicators (KPIs) are most important to you?
+                What key performance indicators (KPIs) are most important to you?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer7-1'
-                      name="KPIs"
-                      type="radio"
-                      value="Answer7-1"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer7-1'> Click-Through Rate (CTR) </label>
+                  <input
+                    id='kpi-1'
+                    name="KPIs"
+                    type="checkbox"
+                    value="Answer7-1"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='kpi-1'> Click-Through Rate (CTR) </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer7-2'
+                    id='kpi-2'
                     name="KPIs"
-                    type="radio"
+                    type="checkbox"
                     value="Conversion Rate"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-2'>  Conversion Rate </label>
-                </div>   
+                  <label htmlFor='kpi-2'>  Conversion Rate </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer7-3'
+                    id='kpi-3'
                     name="KPIs"
-                    type="radio"
+                    type="checkbox"
                     value="Cost per Acquisition (CPA)"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-3'>  Cost per Acquisition (CPA) </label>
-                </div>   
+                  <label htmlFor='kpi-3'>  Cost per Acquisition (CPA) </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer7-4'
+                    id='kpi-4'
                     name="KPIs"
-                    type="radio"
+                    type="checkbox"
                     value="Return on Ad Spend (ROAS)"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-4'>  Return on Ad Spend (ROAS) </label>
-                </div>                 
+                  <label htmlFor='kpi-4'>  Return on Ad Spend (ROAS) </label>
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tools">
-              Do you have any tracking tools or software you’re currently using? 
+                Do you have any tracking tools or software you’re currently using?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
                   <label htmlFor='Answer1'>
                     <input
-                      id='Answer7-1'
+                      id='tools-1'
                       name="Tracking_Tools"
                       type="radio"
                       value="Google Analytics"
@@ -834,30 +800,30 @@ const PaidAdvertisingForm = () => {
                       required
                     />
                   </label>
-                  <label htmlFor='Answer7-1'> Google Analytics </label>
+                  <label htmlFor='tools-1'> Google Analytics </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer7-2'
+                    id='tools-2'
                     name="Tracking_Tools"
                     type="radio"
                     value="Facebook Pixel"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-2'>  Facebook Pixel </label>
-                </div>       
+                  <label htmlFor='tools-2'>  Facebook Pixel </label>
+                </div>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="performance">
-              How frequently do you want to receive performance reports ?
+                How frequently do you want to receive performance reports ?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
                   <label htmlFor='Answer1'>
                     <input
-                      id='Answer7-1'
+                      id='perfomance-1'
                       name="Reports_Frequency"
                       type="radio"
                       value="Weekly"
@@ -865,38 +831,38 @@ const PaidAdvertisingForm = () => {
                       required
                     />
                   </label>
-                  <label htmlFor='Answer7-1'> Weekly </label>
+                  <label htmlFor='perfomance-1'> Weekly </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer7-2'
+                    id='perfomance-2'
                     name="Reports_Frequency"
                     type="radio"
                     value="Bi-Weekly"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-2'>  Bi-Weekly </label>
-                </div>  
+                  <label htmlFor='perfomance-2'>  Bi-Weekly </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer7-3'
+                    id='perfomance-3'
                     name="Reports_Frequency"
                     type="radio"
                     value="Monthly"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer7-3'>  Monthly </label>
-                </div>          
+                  <label htmlFor='perfomance-3'>  Monthly </label>
+                </div>
               </div>
 
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="security">
-                Are there any specific metrics or data points you want to focus on?
+                  Are there any specific metrics or data points you want to focus on?
                 </label>
                 <input
                   id="security"
@@ -906,13 +872,13 @@ const PaidAdvertisingForm = () => {
                   placeholder='ex:- SSL certificate, Data protection, User Authentication'
                   required
                 />
-              </div>             
+              </div>
 
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 08. Ad Targeting Preferences </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="preferences">
-              Do you have any specific targeting preferences?
+                Do you have any specific targeting preferences?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -951,39 +917,37 @@ const PaidAdvertisingForm = () => {
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="customaudiance">
-              Are there any custom audiences you want to target?
+                Are there any custom audiences you want to target?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer8-1'
-                      name="Custom_Audiance"
-                      type="radio"
-                      value="Email List"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer8-1'> Email List </label>
+                  <input
+                    id='customaudiance-1'
+                    name="Custom_Audiance"
+                    type="radio"
+                    value="Email List"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='customaudiance-1'> Email List </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer8-2'
+                    id='customaudiance-2'
                     name="Custom_Audiance"
                     type="radio"
                     value="Previous Customers"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer8-2'>  Previous Customers </label>
-                </div>  
+                  <label htmlFor='customaudiance-2'>  Previous Customers </label>
+                </div>
               </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="different">
-                Would you like to run A/B tests to compare different ad creatives or audiences?
+                  Would you like to run A/B tests to compare different ad creatives or audiences?
                 </label>
                 <input
                   id="different"
@@ -995,44 +959,42 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-            {/* this is nineth section */}
-            <hr className='mt-10 mb-5'/>
+              {/* this is nineth section */}
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 09. Compliance & Brand Safety </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="guidline">
-              Are there any brand safety guidelines or sensitive topics you want to avoid?
+                Are there any brand safety guidelines or sensitive topics you want to avoid?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer9-1'
-                      name="Avoid_Topics"
-                      type="radio"
-                      value="Content types"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer9-1'> Content types </label>
+                  <input
+                    id='guidline-1'
+                    name="Avoid_Topics"
+                    type="radio"
+                    value="Content types"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='guidline-1'> Content types </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer9-2'
+                    id='guidline-2'
                     name="Avoid_Topics"
                     type="radio"
                     value="Language"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer9-2'>  Language </label>
-                </div>  
+                  <label htmlFor='guidline-2'>  Language </label>
+                </div>
               </div>
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="disclaimers">
-                Do you have any legal disclaimers or terms that need to be included in the ads?
+                  Do you have any legal disclaimers or terms that need to be included in the ads?
                 </label>
                 <textarea name="Disclaimers" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
@@ -1040,112 +1002,110 @@ const PaidAdvertisingForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Are there any industry regulations we need to consider when creating your ads?
+                  Are there any industry regulations we need to consider when creating your ads?
                 </label>
                 <textarea name="Industry_Regulations" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
 
-              <hr className='mt-5 mb-5'/>
+              <hr className='mt-5 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 10. Budget Allocation & Scaling </h1>
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="allocating">
-                How do you want to allocate your budget across different platforms or campaigns?
+                  How do you want to allocate your budget across different platforms or campaigns?
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10'>
                   <div>
-                    <label htmlFor='yes'>
-                      <input
-                        id='Answer10-2'
-                        name="Budget_Allocation"
-                        type="radio"
-                        value="50% on Facebook"
-                        className="w-4 h-4"
-                        required
-                      />
-                    </label>
-                    <label htmlFor='Answer10-2'> 50% on Facebook </label>
+                    <input
+                      id='allocating-1'
+                      name="Budget_Allocation"
+                      type="radio"
+                      value="50% on Facebook"
+                      className="w-4 h-4"
+                      required
+                    />
+                    <label htmlFor='allocating-1'> 50% on Facebook </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer10-2'
+                      id='allocating-2'
                       name="Budget_Allocation"
                       type="radio"
                       value="30% on Google Ads"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer10-2'> 30% on Google Ads </label>
+                    <label htmlFor='allocating-2'> 30% on Google Ads </label>
                   </div>
                 </div>
 
                 <div>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="scalingbudget">
-                Are you open to scaling the budget if the ads perform well?
-                </label>
-                <textarea name="Budget_Scaling" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
-                </textarea>
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="scalingbudget">
+                    Are you open to scaling the budget if the ads perform well?
+                  </label>
+                  <textarea name="Budget_Scaling" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                  </textarea>
+                </div>
+
+                <div>
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contingency">
+                    Do you have a contingency plan or budget in case the initial strategy needs adjustment?
+                  </label>
+                  <textarea name="Contingency_Plan" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                  </textarea>
+                </div>
+
               </div>
 
-              <div>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contingency">
-                Do you have a contingency plan or budget in case the initial strategy needs adjustment?
-                </label>
-                <textarea name="Contingency_Plan" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
-                </textarea>
-              </div>
-
-              </div>
-
-              <hr className='mt-10 mb-5'/>
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 11. Integration with Other Marketing Channels </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="marketingchannel">
-              Are there any other marketing channels or campaigns you’re running that we should align with?
-                </label>
-                <div className='grid md:grid-cols-2 grid-cols-1 pb-10'>
-                  <div>
-                      <input
-                        id='email-marketing'
-                        name="Marketing_Channels"
-                        type="radio"
-                        value="Email marketing"
-                        className="w-4 h-4"
-                        required
-                      />                
-                    <label htmlFor='marketingchennel'> Email marketing </label>
-                  </div>
-
-                  <div>
-                    <input
-                      id='SEO'
-                      name="Marketing_Channels"
-                      type="radio"
-                      value="SEO"
-                      className="w-4 h-4"
-                      required
-                    />
-                    <label htmlFor='marketingchennel'> SEO </label>
-                  </div>
-
-                  <div>
-                    <input
-                      id='offline-prootions'
-                      name="Marketing_Channels"
-                      type="radio"
-                      value="Offline promotions"
-                      className="w-4 h-4"
-                      required
-                    />
-                    <label htmlFor='marketingchennel'> Offline promotions </label>
-                  </div>
+                Are there any other marketing channels or campaigns you’re running that we should align with?
+              </label>
+              <div className='grid md:grid-cols-2 grid-cols-1 pb-10'>
+                <div>
+                  <input
+                    id='email-marketing'
+                    name="Marketing_Channels"
+                    type="checkbox"
+                    value="Email marketing"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='email-marketing'> Email marketing </label>
                 </div>
+
+                <div>
+                  <input
+                    id='SEO'
+                    name="Marketing_Channels"
+                    type="checkbox"
+                    value="SEO"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='SEO'> SEO </label>
+                </div>
+
+                <div>
+                  <input
+                    id='offline-prootions'
+                    name="Marketing_Channels"
+                    type="checkbox"
+                    value="Offline promotions"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='offline-prootions'> Offline promotions </label>
+                </div>
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="crm">
-                Do you want to integrate the paid ads with your existing CRM or email marketing tools?
+                  Do you want to integrate the paid ads with your existing CRM or email marketing tools?
                 </label>
                 <input
                   id="crm"
@@ -1156,11 +1116,11 @@ const PaidAdvertisingForm = () => {
                   required
                 />
               </div>
-              <hr className='mt-5 mb-5'/>
+              <hr className='mt-5 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 12. Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="paidadd">
-                How should the paid ads complement your organic social media content?
+                  How should the paid ads complement your organic social media content?
                 </label>
                 <input
                   id="paidadd"
@@ -1172,14 +1132,14 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              
-            {/* this is twelveth section */}
-            <hr className='mt-10 mb-5'/>
+
+              {/* this is twelveth section */}
+              <hr className='mt-20 mb-5' />
               <h1 className='text-2xl font-bold py-3'> 13. Additional Preferences </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="creativeideas">
-                Do you have any specific creative ideas or themes you’d like to explore?
+                  Do you have any specific creative ideas or themes you’d like to explore?
                 </label>
                 <input
                   id="creativeideas"
@@ -1189,11 +1149,11 @@ const PaidAdvertisingForm = () => {
                   placeholder='type here the answer'
                   required
                 />
-              </div>    
+              </div>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-                Are there any content types or formats you’d like to avoid?
+                  Are there any content types or formats you’d like to avoid?
                 </label>
                 <input
                   id="contenttype"
@@ -1203,52 +1163,61 @@ const PaidAdvertisingForm = () => {
                   placeholder='type here the answer'
                   required
                 />
-              </div>    
+              </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="addstyle">
-              Do you have any particular preferences for the tone or style of the ads?
+                Do you have any particular preferences for the tone or style of the ads?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='Answer1'>
-                    <input
-                      id='Answer12-1'
-                      name="Particular_Preferences"
-                      type="radio"
-                      value="Humorous"
-                      className="w-4 h-4"
-                      required
-                    />
-                  </label>
-                  <label htmlFor='Answer12-1'> Humorous </label>
+                  <input
+                    id='addstyle-1'
+                    name="Particular_Preferences"
+                    type="radio"
+                    value="Humorous"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='addstyle-1'> Humorous </label>
                 </div>
 
                 <div>
                   <input
-                    id='Answer12-2'
+                    id='addstyle-2'
                     name="Particular_Preferences"
                     type="radio"
                     value="Serious"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer12-2'>  Serious </label>
-                </div>   
+                  <label htmlFor='addstyle-2'>  Serious </label>
+                </div>
 
                 <div>
                   <input
-                    id='Answer12-3'
+                    id='addstyle-3'
                     name="Particular_Preferences"
                     type="radio"
                     value="Urgent"
                     className="w-4 h-4"
                     required
                   />
-                  <label htmlFor='Answer12-3'>  Urgent </label>
-                </div>                           
-              </div>                            
+                  <label htmlFor='addstyle-3'>  Urgent </label>
+                </div>
+              </div>
             </motion.div>
 
+            <div className="flex items-center my-5">
+                  <button type="submit" className="px-8 py-2 bg-blue-600 rounded hover:opacity-90 hover:scale-105 transition duration-200 ">
+                    Send
+                  </button>
+
+                  <Link href='/' className='ml-auto'>
+                    <button type="reset" className="px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
+                      Cancel
+                    </button>
+                  </Link>
+                </div>
 
           </form >
         </div >

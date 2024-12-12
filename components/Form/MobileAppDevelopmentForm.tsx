@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from 'next/link';
 
 
 const MobileAppDevelopmentForm = () => {
@@ -11,7 +12,7 @@ const MobileAppDevelopmentForm = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  
+
   // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
@@ -34,7 +35,7 @@ const MobileAppDevelopmentForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
-                What is the name of Company/Business ?
+                  What is the name of Company/Business ?
                 </label>
                 <input
                   id="company"
@@ -47,7 +48,7 @@ const MobileAppDevelopmentForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                What type of business do you operate?
+                  What type of business do you operate?
                 </label>
                 <input
                   id="Business_Type"
@@ -60,7 +61,7 @@ const MobileAppDevelopmentForm = () => {
               </div>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                Where is your business located?
+                  Where is your business located?
                 </label>
                 <input
                   id="Business_Type"
@@ -70,13 +71,13 @@ const MobileAppDevelopmentForm = () => {
                   placeholder="type here the answer"
                   required
                 />
-              </div>            
+              </div>
 
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 02. Contact Information </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 2. Contact Information </h1>
               <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                Your Name:
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  Your Name:
                 </label>
                 <input
                   id="Customer_Name"
@@ -85,11 +86,11 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=" Type your name here "
                   required
-                />             
-                </div>
-                <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                Email Address:
+                />
+              </div>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  Email Address:
                 </label>
                 <input
                   id="Customer_Email"
@@ -98,11 +99,11 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=" Type your email here "
                   required
-                />             
-                </div>
-                <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                Phone number:
+                />
+              </div>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  Phone number:
                 </label>
                 <input
                   id="Customer_Phone"
@@ -113,16 +114,16 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=" Type your Phone Number here eg:- 123-4567890"
                   required
-                />             
-                </div>
+                />
+              </div>
 
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 03.  Project Overview </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 3.  Project Overview </h1>
 
               <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-              What is the purpose of the mobile app?
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  What is the purpose of the mobile app?
                 </label>
                 <input
                   id="Mobile_App_Purpose"
@@ -131,9 +132,9 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=" e.g., customer engagement, sales, booking, loyalty programs, etc.. "
                   required
-                />             
-                </div>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                />
+              </div>
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
                 Do you already have a website or social media presence?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
@@ -161,19 +162,19 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> No </label>
-                </div>   
-            </div>                           
-            
-            <div className='pb-5'>
+                </div>
+              </div>
+
+              <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                If Yes, please provide the Links.
+                  If Yes, please provide the Links.
                 </label>
                 <textarea name="Social_Media_Presence" placeholder=" Paste Link Here " className='placeholder-slate-700 p-2 md:p-3 w-full h-20 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
-            </div>
+              </div>
 
-            <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
-            What platforms do you want the app to be developed for?
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                What platforms do you want the app to be developed for?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -200,7 +201,7 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> IOS </label>
-                </div>   
+                </div>
 
                 <div>
                   <input
@@ -212,12 +213,12 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> Both </label>
-                </div>   
-            </div>      
+                </div>
+              </div>
 
-            <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-              Do you have a preferred launch date for the app?
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  Do you have a preferred launch date for the app?
                 </label>
                 <input
                   id="Mobile_App_Purpose"
@@ -226,21 +227,21 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=""
                   required
-                />             
-                </div>                         
+                />
+              </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 04. Features & Functionality </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 4. Features & Functionality </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                What key features would you like the app to include?
+                  What key features would you like the app to include?
                 </label>
                 <textarea name="Key_Features" placeholder=" e.g., product catalog, online booking, push notifications, payment gateway, user login, etc.. " className='placeholder-slate-700 p-2 md:p-3 w-full h-20 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
               </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
-              Do you need any integrations with existing systems?
+                Do you need any integrations with existing systems?
               </label>
               <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                 <div>
@@ -267,7 +268,7 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> CRM </label>
-                </div>   
+                </div>
 
                 <div>
                   <input
@@ -279,12 +280,12 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                   <label htmlFor='Answer2'> Third-party Tools </label>
-                </div>   
-            </div>  
+                </div>
+              </div>
 
-            <div className='pb-5'>
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-              Would you like us to include analytics to track user behavior and app performance?
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  Would you like us to include analytics to track user behavior and app performance?
                 </label>
                 <input
                   id="Mobile_App_Purpose"
@@ -293,17 +294,17 @@ const MobileAppDevelopmentForm = () => {
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder=" Type your answer here "
                   required
-                />             
-                </div>    
+                />
+              </div>
 
 
-            {/* this is the fifth section */}
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 05. Design Preferences </h1>
+              {/* this is the fifth section */}
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 5. Design Preferences </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Do you have any specific design ideas or branding guidelines?
+                  Do you have any specific design ideas or branding guidelines?
                 </label>
                 <textarea name="Specific_Design_Ideas" placeholder=" Type your answer here " className='placeholder-slate-700 p-2 md:p-3 w-full h-30 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
@@ -311,17 +312,17 @@ const MobileAppDevelopmentForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Are there any apps you admire or want to take inspiration from?
+                  Are there any apps you admire or want to take inspiration from?
                 </label>
                 <textarea name="Inspiration_Apps" placeholder=" Please provide examples, if any. " className='placeholder-slate-700 p-2 md:p-3 w-full h-30 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
-              </div>            
+              </div>
 
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 06. Maintenance & Updates </h1>
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 6. Maintenance & Updates </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you plan to manage app updates yourself, or would you like us to provide ongoing maintenance?
+                  Do you plan to manage app updates yourself, or would you like us to provide ongoing maintenance?
                 </label>
                 <input
                   id="competitors"
@@ -332,15 +333,15 @@ const MobileAppDevelopmentForm = () => {
                   required
                 />
               </div>
-             
-              
-            {/* this is seventh section */}
-            <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 07. Budget & Expectations </h1>
+
+
+              {/* this is seventh section */}
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 7. Budget & Expectations </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                Do you have a budget range for this project?
+                  Do you have a budget range for this project?
                 </label>
                 <input
                   id="competitors"
@@ -354,7 +355,7 @@ const MobileAppDevelopmentForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                What is your primary goal for the app?
+                  What is your primary goal for the app?
                 </label>
                 <input
                   id="competitors"
@@ -365,17 +366,31 @@ const MobileAppDevelopmentForm = () => {
                   required
                 />
               </div>
-             
-              <hr className='mt-10 mb-5'/>
-              <h1 className='text-2xl font-bold py-3'> 08. Additional Comments </h1>
+
+              <hr className='mt-20 mb-5' />
+              <h1 className='text-2xl font-bold py-3'> 8. Additional Comments </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Is there anything else you would like us to know about your project?
+                  Is there anything else you would like us to know about your project?
                 </label>
                 <textarea name="Comments" placeholder=" Type anything.. " className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>
-              </div>    
+              </div>
+
+
+              <div className="flex items-center my-5">
+                  <button type="submit" className="px-8 py-2 bg-blue-600 rounded hover:opacity-90 hover:scale-105 transition duration-200 ">
+                    Send
+                  </button>
+
+                  <Link href='/' className='ml-auto'>
+                    <button type="reset" className="px-8 py-2 border-2 text-blue-600 border-blue-600 rounded hover:opacity-90 hover:text-iceblue hover:border-iceblue transition duration-300">
+                      Cancel
+                    </button>
+                  </Link>
+                </div>
+
             </motion.div>
 
           </form >
