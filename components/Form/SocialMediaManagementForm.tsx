@@ -18,11 +18,11 @@ const WebDesignForm = () => {
 
   return (
     <>
-
+<section className='relative overflow-x-clip'>
       <div className="absolute top-[50%] opacity-55 justify-center z-[-1] transition -translate-x-96">
         <div className="w-[350px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
       </div>
-      <div className="absolute top-[300%] right-0 translate-x-96 opacity-55 z-[-1]">
+      <div className="absolute top-[80%] right-0 translate-x-96 opacity-55 z-[-1]">
         <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
       </div>
 
@@ -1080,6 +1080,7 @@ const WebDesignForm = () => {
           </form >
         </div >
       </div >
+      </section>
     </>
 
 

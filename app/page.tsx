@@ -1,6 +1,6 @@
 
 import Hero from "@/components/Hero";
-import AboutSectionOne from "@/components/About/AboutSectionOne";
+import AboutSectionOne from "@/components/About";
 import Brands from "@/components/Brands";
 import Contact from "@/components/Contact";
 import Video from "@/components/Video";

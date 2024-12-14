@@ -34,24 +34,21 @@ const testimonialData: Testimonial[] = [
 ];
 
 const Testimonials = () => {
-
-      // Create a reference for the element
       const ref = useRef(null);
-      // Hook to detect if the element is in view
       const isInView = useInView(ref, { once: true }); 
 
 
   return (
-    <section id="benifits" className="relative bg-primary/[.03] py-16 md:py-20 lg:py-28">
+    <section id="benifits" className="relative bg-primary/[.03] py-16 md:py-20 lg:py-28 overflow-x-clip">
       <div className="absolute opacity-20 justify-center z-[-1] transition-all translate-x-80 translate-y-24">
         <div className="w-[800px] h-[600px] rounded-full blur-[100px] bg-gradientbg "> </div>
       </div>
 
       <div className="container px-10">
       <motion.div
-                 ref={ref} // Attach the ref to the element
+                 ref={ref} 
                  initial={{ y: -50, opacity: 0 }}
-                 animate={isInView ? { opacity: 1 , y: 0 } : { opacity: 0 , y:-50 }} // Only animate when in view
+                 animate={isInView ? { opacity: 1 , y: 0 } : { opacity: 0 , y:-50 }} 
                  transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                  className="wow fadeInUp"
           >

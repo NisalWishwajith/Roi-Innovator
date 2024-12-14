@@ -18,6 +18,7 @@ const CopyWritingForm = () => {
 
   return (
     <>
+    <section className='relative overflow-x-clip'>
       <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue"> Copy Writing </h2>
       <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
         {/* Contact Form */}
@@ -818,6 +819,7 @@ const CopyWritingForm = () => {
           </form >
         </div >
       </div >
+      </section>
     </>
 
 
