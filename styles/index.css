@@ -74,7 +74,8 @@ li {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #38B6FF;
+  background-color: #090E34;
+  border: 1px solid #38B6FF;
   transform: translateX(-20%);
 }
 

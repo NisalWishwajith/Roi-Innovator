@@ -5,7 +5,7 @@ const RoadMapItem = ({ id, stage, goal , activities, isEven }) => {
         isEven ? 'roadmap-item--even' : 'roadmap-item--odd'
       }`}
     >
-      <div className="roadmap-item__marker text-dark font-bold lg:text-lg text-sm lg:pt-0 pt-[2px]"> {id} </div>
+      <div className="roadmap-item__marker text-iceblue font-bold lg:text-lg text-sm lg:pt-0 pt-[2px]"> {id} </div>
     
       <div className="roadmap-item__content bg-black/70 shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]">
         <h3 className="roadmap-item__stage"> {stage} </h3>     

@@ -79,10 +79,9 @@ export default function Particle() {
               },
               number: {
                 density: {
-                  enable: true,
-                  area: 800,
+                  enable: false,
                 },
-                value: 160,
+                value: 80,
               },
               opacity: {
                 value: 0.5,

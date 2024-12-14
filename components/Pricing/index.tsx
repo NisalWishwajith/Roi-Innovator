@@ -7,9 +7,9 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative">
+    <section id="pricing" className="relative py-10">
       <div className="container px-10">
-        <h1 className="text-white text-3xl md:text-[45px] font-bold p-4 text-center py-10"> Prices </h1>
+        <h1 className="text-white text-3xl md:text-[45px] font-bold p-4 text-center py-10"> Pricing Plans </h1>
         <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16">

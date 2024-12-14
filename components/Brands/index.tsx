@@ -43,7 +43,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
       <div className="relative h-8 w-8 md:h-10 md:w-10">
         <Image src={image} alt={name} fill priority />
       </div>
-      <p className="text-iceblue text-xs md:text-xl ml-2">{name}</p>
+      <p className="text-iceblue text-xs md:text-lg ml-2"> {name} </p>
     </div>
   );
 };
