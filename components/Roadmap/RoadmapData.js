@@ -223,39 +223,39 @@ export const copywritingData = [
 export const contentCreationData = [
   {
     id: 1,
-    stage: 'Initial Consultation',
-    goal: 'Understand your business, target audience, and messaging needs.',
-    activities: 'Discuss brand voice, tone, and specific copywriting goals (web content, ads, product descriptions, etc.).'
+    stage: 'Week 1: Initial Consultation',
+    goal: 'Understand your business goals, brand identity, and audience.',
+    activities: 'Discuss content objectives, preferred formats, and platform-specific needs.'
   },
   {
     id: 2,
-    stage: 'Research & Strategy Development',
-    goal: 'Develop a tailored copywriting strategy.',
-    activities: 'Conduct research on the target audience, competitors, and relevant industry trends. Create a plan outlining content structure and key messaging points.'
+    stage: 'Week 2: Content Strategy Development',
+    goal: 'Create a detailed plan to guide content production.',
+    activities: 'Develop a content calendar, themes, and posting schedule tailored to your brand.'
   },
   {
     id: 3,
-    stage: 'Drafting Initial Copy',
-    goal: 'Produce high-quality, persuasive copy aligned with your brand.',
-    activities: 'Write the initial copy for the required materials, ensuring clarity, engagement, and alignment with your brand\'s tone.'
+    stage: 'Weeks 3-4: Content Production',
+    goal: 'Craft high-quality, engaging content aligned with your strategy.',
+    activities: ' Script, shoot, design, and edit graphics, videos, and posts. Share drafts for feedback.'
   },
   {
     id: 4,
-    stage: 'Client Review & Feedback',
-    goal: 'Ensure the copy meets your expectations and business needs.',
-    activities: 'Present the draft copy to you for feedback. Make revisions based on your input to perfect the message.'
+    stage: 'Month 1: Content Launch',
+    goal: 'Roll out your content plan and monitor initial performance.',
+    activities: 'Publish approved content across platforms, engage with your audience, and analyze early metrics.'
   },
   {
     id: 5,
-    stage: 'Final Approval & Optimization',
-    goal: 'Finalize the copy for distribution or publishing.',
-    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it\’s optimized for the intended platform (web, social, print, etc.).'
+    stage: 'Month 2: Optimization & Growth',
+    goal: 'Enhance the impact of your content strategy.',
+    activities: 'Use performance data to refine content, adjust the strategy, and maximize engagement.'
   },
   {
     id: 6,
-    stage: 'Ongoing Adjustments & Additional Projects',
-    goal: 'Maintain consistency and relevance across all content.',
-    activities: 'Continue refining copy as your business evolves, creating additional content as needed for ongoing campaigns or new projects.'
+    stage: 'Ongoing (Months 3+): Continuous Content Creation',
+    goal: 'Maintain consistent, impactful content output to grow your presence.',
+    activities: ' Create fresh content monthly, introduce new formats, and evolve with audience preferences.'
   }
 ];
 

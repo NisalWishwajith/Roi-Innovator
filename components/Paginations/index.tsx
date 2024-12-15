@@ -16,45 +16,51 @@ const tabConfig = [
   {
     id: "webdesign",
     label: "Web Design",
-    introduction: `At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality. 
-    Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, 
-    SEO-optimized websites that deliver a seamless user experience across all devices.`,
+    introduction: `At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality. Our web design services
+     ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized websites that deliver a 
+     seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to 
+     life and drive real business results. Let us transform your online presence today!`,
     component: <WebDesign />,
   },
   {
     id: "socialmediamanagement",
     label: "Social Media Management",
-    introduction: `At ROIInnovators, we manage your social media so you can focus on growing your business. 
-    We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms 
-    like Facebook, Instagram, TikTok, and LinkedIn.`,
+    introduction: `At ROIInnovators, we manage your social media so you can focus on growing your business. We create engaging content, build brand awareness, 
+    and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent
+    growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
     component: <SocialMediaManagement />,
   },
   {
     id: "paidadvertising",
     label: "Paid Advertising",
-    introduction: `At ROIInnovators, our paid advertising services are designed to drive targeted traffic and boost conversions. 
-    We create tailored ad campaigns across platforms like Google, Facebook, and Instagram, optimizing every dollar to ensure maximum ROI.`,
+    introduction: `At ROIInnovators, our paid advertising services are designed to drive targeted traffic and boost conversions.
+     We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure 
+     maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. 
+     Let’s turn clicks into customers!`,
     component: <PaidAdvertising />,
   },
   {
     id: "mobileappdevelopment",
     label: "Mobile App Development",
-    introduction: `At ROIInnovators, we create custom mobile apps that elevate your business. 
-    From concept to launch, we develop intuitive, high-performance apps for iOS and Android, designed to engage users and streamline your operations.`,
+    introduction: `At ROIInnovators, we create custom mobile apps that elevate your business. From concept to launch, we develop intuitive, 
+    high-performance apps for iOS and Android, designed to engage users and streamline your operations. Whether it’s an app to boost customer
+     interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!`,
     component: <MobileAppDevelopment />,
   },
   {
     id: "copywriting",
     label: "Copy Writing",
-    introduction: `At ROIInnovators, our copywriting services focus on crafting compelling text that grabs attention and drives action. 
-    Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!`,
+    introduction: `At ROIInnovators, our copywriting services focus on crafting compelling text that grabs attention and drives action. Copywriting 
+    is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage 
+    with your business. Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!`,
     component: <Copywriting />,
   },
   {
     id: "contentcreation",
     label: "Content Creation",
-    introduction: `At ROIInnovators, we create captivating content that speaks to your audience and elevates your brand. 
-    From eye-catching visuals to engaging videos, we craft content tailored to your business goals.`,
+    introduction: `At ROIInnovators, we create captivating content that speaks to your audience and elevates your brand. From eye-catching visuals to 
+    engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! Let’s showcase 
+    what we can do and help your business stand out online.`,
     component: <Contentcreation />,
   },
 ];
