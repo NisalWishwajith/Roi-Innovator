@@ -17,7 +17,7 @@ const Hero = () => {
                 <div className="w-[1000px] h-[400px] bg-gradientbg blur-[100px] rounded-full"></div>
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/60 to-black -z-20"></div>
+            <div className="absolute inset-0 md:bg-transparent bg-black/60 -z-10"></div>
 
             <div className="container flex items-center justify-center h-full">
                 <div className="text-center" ref={ref}>

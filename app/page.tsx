@@ -8,6 +8,7 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Pagination from "@/components/Paginations";
 import ScrollTop from "@/components/ScrollToTop";
+import Services from "@/components/Services";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <AboutSectionOne />
       <Video />
+      <Services />
       <Brands />
       <Pagination />
       <Pricing />
