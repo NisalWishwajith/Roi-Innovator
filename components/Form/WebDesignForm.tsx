@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from 'next/link';
+import { FaHome } from "react-icons/fa";
 
 
 const WebDesignForm = () => {
@@ -58,14 +59,23 @@ const WebDesignForm = () => {
     <>
       <section className='relative overflow-x-clip'>
         <div className="absolute opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
-          <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+          <div className="w-[330px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
         </div>
         <div className="absolute bottom-0 right-0 md:translate-x-72 translate-x-96 opacity-55 z-[-1]">
-          <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
+          <div className="w-[300px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
+        </div>
+        <div className="flex items-center justify-between border-b-2 border-iceblue mb-8">
+          <Link href="/">
+            <button className="rounded-md text-2xl p-2 mx-4 border-2 border-iceblue text-iceblue hover:text-white hover:border-white">
+              <FaHome />
+            </button>
+          </Link>
+          <h2 className="text-4xl md:text-6xl mt-4 pt-3 pb-8 text-center font-bold underline bg-gradient-to-r from-primary via-iceblue to-dark bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient">
+            Web Design
+          </h2>
+          <div className="w-10"></div>
         </div>
 
-
-        <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue">Web Design</h2>
         <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
 
           <div className="lg:w-full">
