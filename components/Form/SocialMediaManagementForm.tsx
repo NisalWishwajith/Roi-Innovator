@@ -8,13 +8,7 @@ import { FaHome } from "react-icons/fa";
 
 const WebDesignForm = () => {
 
-  // Create a reference for the element
   const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-
-  // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
   return (
@@ -42,7 +36,41 @@ const WebDesignForm = () => {
         {/* Contact Form */}
 
         <div className="lg:w-full">
-          <form className="">
+        <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+
+                const Platforms = formData.getAll("Platforms");
+                const sharingContents = formData.getAll("Sharing-Contents");
+                const primaryGoals = formData.getAll("Primary-Goals");
+                const contentTypes = formData.getAll("Content-Types");
+                const metrics = formData.getAll("Metrics");
+            
+                formData.set("Platforms", Platforms.join(", "));
+                formData.set("Sharing-Contents", sharingContents.join(", "));
+                formData.set("Primary-Goals", primaryGoals.join(", "));
+                formData.set("Content-Types", contentTypes.join(", "));
+                formData.set("Metrics", metrics.join(", "));
+
+                try {
+                  const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                    method: 'POST',
+                    body: formData,
+                  });
+
+                  const result = await response.json();
+                  if (result.result === 'success') {
+                    window.location.href = '/thankyou';
+                  } else {
+                    alert(`Error: ${result.message}`);
+                  }
+                } catch (error) {
+                  console.error('Error submitting form:', error);
+                  alert('An error occurred. Please try again later.');
+                }
+              }}
+            >
             <motion.div
               ref={ref1} // Attach the ref to the element
               initial={{ y: -100, opacity: 0 }}
@@ -50,7 +78,8 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 0, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-
+              <input type="hidden" name="formName" value="Social_Media_Management" />
+              <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
               <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
               <div className='pb-5'>
@@ -59,7 +88,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="company"
-                  name="company"
+                  name="Company"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -73,7 +102,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='ecommerce'
-                    name="nature"
+                    name="Nature"
                     type="radio"
                     value="e-commerce"
                     className="w-4 h-4"
@@ -85,7 +114,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='service-based'
-                    name="nature"
+                    name="Nature"
                     type="radio"
                     value="service-based"
                     className="w-4 h-4"
@@ -97,7 +126,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='informational'
-                    name="nature"
+                    name="Nature"
                     type="radio"
                     value="informational"
                     className="w-4 h-4"
@@ -109,7 +138,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='blog'
-                    name="nature"
+                    name="Nature"
                     type="radio"
                     value="blog"
                     className="w-4 h-4"
@@ -126,7 +155,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="product"
-                  name="product"
+                  name="Product"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -138,7 +167,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="audience"
-                  name="audience"
+                  name="Target-Audience"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -150,7 +179,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="usp"
-                  name="usp"
+                  name="USPs"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -167,22 +196,20 @@ const WebDesignForm = () => {
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='platform'>
                     <input
                       id='facebook'
-                      name="feature"
+                      name="Platforms"
                       type="checkbox"
                       value="facebook"
                       className="w-4 h-4"
                     />
-                  </label>
                   <label htmlFor='facebook'> Facebook </label>
                 </div>
 
                 <div>
                   <input
                     id='instergram'
-                    name="feature"
+                    name="Platforms"
                     type="checkbox"
                     value="instergram"
                     className="w-4 h-4"
@@ -193,7 +220,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='tiktok'
-                    name="feature"
+                    name="Platforms"
                     type="checkbox"
                     value="tiktok"
                     className="w-4 h-4"
@@ -204,7 +231,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='twitter'
-                    name="feature"
+                    name="Platforms"
                     type="checkbox"
                     value="twitter"
                     className="w-4 h-4"
@@ -217,7 +244,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="frequentlyuse">
                   How frequently do you post on each platform ?
                 </label>
-                <textarea name="frequentlyuse" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Frequently-Use" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' required>
                 </textarea>
               </div>
 
@@ -227,7 +254,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="activeness"
-                  name="activeness"
+                  name="Social-Media-Activeness"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -240,7 +267,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="manageperson"
-                  name="manageperson"
+                  name="Social-Media-Manager"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -254,7 +281,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='text'
-                    name="content"
+                    name="Sharing-Contents"
                     type="checkbox"
                     value="text"
                     className="w-4 h-4"
@@ -266,7 +293,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='images'
-                    name="content"
+                    name="Sharing-Contents"
                     type="checkbox"
                     value="images"
                     className="w-4 h-4"
@@ -277,7 +304,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='videos'
-                    name="content"
+                    name="Sharing-Contents"
                     type="checkbox"
                     value="videos"
                     className="w-4 h-4"
@@ -288,7 +315,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='blogs'
-                    name="content"
+                    name="Sharing-Contents"
                     type="checkbox"
                     value="blogs"
                     className="w-4 h-4"
@@ -310,7 +337,7 @@ const WebDesignForm = () => {
                   <label htmlFor='primarygoal'>
                     <input
                       id='brandawareness'
-                      name="feature"
+                      name="Primary-Goals"
                       type="checkbox"
                       value="brandawareness"
                       className="w-4 h-4"
@@ -322,7 +349,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='lead_generation'
-                    name="feature"
+                    name="Primary-Goals"
                     type="checkbox"
                     value=" lead_generation"
                     className="w-4 h-4"
@@ -333,7 +360,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='customer_engagement'
-                    name="feature"
+                    name="Primary-Goals"
                     type="checkbox"
                     value="customer_engagement"
                     className="w-4 h-4"
@@ -344,7 +371,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='community_building'
-                    name="feature"
+                    name="Primary-Goals"
                     type="checkbox"
                     value="community_building"
                     className="w-4 h-4"
@@ -355,7 +382,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='sales'
-                    name="feature"
+                    name="Primary-Goals"
                     type="checkbox"
                     value="sales"
                     className="w-4 h-4"
@@ -373,7 +400,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='campaign-yes'
-                      name="campaign"
+                      name="Campaigns/Promotions"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -385,7 +412,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='campaign-no'
-                      name="campaign"
+                      name="Campaigns/Promotions"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -404,7 +431,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='traffic-yes'
-                      name="traffic"
+                      name="Grow-Followers"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -416,7 +443,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='traffic-no'
-                      name="traffic"
+                      name="Grow-Followers"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -428,12 +455,12 @@ const WebDesignForm = () => {
               </div>
 
               <div className='pb-5'>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="onjectives">
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="objectives">
                   What are your long-term objectives with social media?
                 </label>
                 <input
                   id="onjectives"
-                  name="onjectives"
+                  name="Social-Media-Objectives"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -445,29 +472,27 @@ const WebDesignForm = () => {
               </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-                What types of content do you think resonate most with your audience?
+                What types of contents do you think resonate most with your audience?
               </label>
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='contenttype'>
                     <input
                       id='educational'
-                      name="feature"
+                      name="Content-Types"
                       type="checkbox"
                       value="educational"
                       className="w-4 h-4"
                     />
-                  </label>
                   <label htmlFor='educational'> Educational </label>
                 </div>
 
                 <div>
                   <input
-                    id=' promotional,'
-                    name="feature"
+                    id='promotional,'
+                    name="Content-Types"
                     type="checkbox"
-                    value=" promotional,"
+                    value=" promotional"
                     className="w-4 h-4"
                   />
                   <label htmlFor='promotional,'>  Promotional </label>
@@ -475,19 +500,19 @@ const WebDesignForm = () => {
 
                 <div>
                   <input
-                    id='customer_engagement'
-                    name="feature"
+                    id='customer-engagement'
+                    name="Content-Types"
                     type="checkbox"
                     value="customer_engagement"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='customer_engagement'> Customer Engagement </label>
+                  <label htmlFor='customer-engagement'> Customer Engagement </label>
                 </div>
 
                 <div>
                   <input
                     id='behind-the-scenes'
-                    name="feature"
+                    name="Content-Types"
                     type="checkbox"
                     value="behind-the-scenes"
                     className="w-4 h-4"
@@ -498,7 +523,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='customer_testimonials'
-                    name="feature"
+                    name="Content-Types"
                     type="checkbox"
                     value="customer_testimonials"
                     className="w-4 h-4"
@@ -516,7 +541,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='person-yes'
-                      name="person"
+                      name="Want-Content-Creator"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -528,7 +553,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='person-no'
-                      name="person"
+                      name="Want-Content-Creator"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -541,14 +566,13 @@ const WebDesignForm = () => {
 
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="assistant">
-                  Would you like assistance with content creation? (ex:- photography, video production, graphic design)
-
+                  Would you like assistance with content creation ? (ex:- photography, video production, graphic design)
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <input
                       id='assistant-yes'
-                      name="assistant"
+                      name="Assistant-Content-Creation"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -560,7 +584,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='assistant-no'
-                      name="assistant"
+                      name="Assistant-Content-Creation"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -577,7 +601,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="posttimes"
-                  name="posttimes"
+                  name="Post-Time-Range"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -597,7 +621,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='guidline-yes'
-                      name="guidline"
+                      name="Guidlines"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -609,7 +633,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='guidline-no'
-                      name="guidline"
+                      name="Guidlines"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -621,28 +645,26 @@ const WebDesignForm = () => {
               </div>
 
               <div>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tone">
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="brand-type">
                   How would you describe your brand’s voice and tone?
                 </label>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
-                    <label htmlFor='tone'>
                       <input
                         id='Professional'
-                        name="tone"
+                        name="Brand-Type"
                         type="radio"
                         value="Professional"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
                     <label htmlFor='Professional'> Professional </label>
                   </div>
 
                   <div>
                     <input
                       id='Casual'
-                      name="tone"
+                      name="Brand-Type"
                       type="radio"
                       value="Casual"
                       className="w-4 h-4"
@@ -654,7 +676,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='Humorous'
-                      name="tone"
+                      name="Brand-Type"
                       type="radio"
                       value="Humorous"
                       className="w-4 h-4"
@@ -670,7 +692,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="message">
                   Are there any specific messages or themes you want to convey consistently ?
                 </label>
-                <textarea name="message" placeholder='if no , type "none"' className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Additional" placeholder='if no , type "none"' className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
@@ -683,7 +705,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="engage"
-                  name="engage"
+                  name="Engage-with-Audiance"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -691,14 +713,14 @@ const WebDesignForm = () => {
               </div>
 
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="plan">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="planforcustomerinquaries">
                 Do you have a plan for handling customer inquiries and feedback on social media?
               </label>
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                 <div>
                   <input
                     id='plan-yes'
-                    name="campaign"
+                    name="Plan-for-Customer-Inquiries"
                     type="radio"
                     value="yes"
                     className="w-4 h-4"
@@ -710,7 +732,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='plan-no'
-                    name="campaign"
+                    name="Plan-for-Customer-Inquiries"
                     type="radio"
                     value="no"
                     className="w-4 h-4"
@@ -727,7 +749,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="challenges"
-                  name="challenges"
+                  name="Challenges"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -743,7 +765,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="campaign"
-                  name="campaign"
+                  name="Campaign"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -757,7 +779,7 @@ const WebDesignForm = () => {
                 <span className=''> EURO </span>
                 <input
                   id="budget"
-                  name="budget"
+                  name="Budget"
                   type="number"
                   className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -770,7 +792,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="upcomingpromotion"
-                  name="upcomingpromotion"
+                  name="Upcoming-Promotions"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -787,7 +809,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="competitor"
-                  name="competitor"
+                  name="Competitors"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -800,7 +822,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="competitors"
-                  name="competitors"
+                  name="Speific-Competitors"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -813,7 +835,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="differentiate"
-                  name="differentiate"
+                  name="Difference"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -831,7 +853,7 @@ const WebDesignForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='click-through-rate'
-                      name="kpi"
+                      name="KPI"
                       type="radio"
                       value="click-through-rate"
                       className="w-4 h-4"
@@ -844,7 +866,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='engagement-rate'
-                    name="kpi"
+                    name="KPI"
                     type="radio"
                     value="engagement-rate"
                     className="w-4 h-4"
@@ -856,7 +878,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='follower-growth'
-                    name="kpi"
+                    name="KPI"
                     type="radio"
                     value="follower-growth"
                     className="w-4 h-4"
@@ -866,7 +888,7 @@ const WebDesignForm = () => {
                 </div>
               </div>
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="performance">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="Report-Timeline">
                 How frequently do you want to receive performance reports ?
               </label>
               <div className='grid md:grid-cols-3 grid-cols-1 pb-10 gap-1'>
@@ -874,7 +896,7 @@ const WebDesignForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='weekly'
-                      name="performance"
+                      name="Report-Timeline"
                       type="radio"
                       value="weekly"
                       className="w-4 h-4"
@@ -887,7 +909,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='bi-weekly'
-                    name="performance"
+                    name="Report-Timeline"
                     type="radio"
                     value="bi-weekly"
                     className="w-4 h-4"
@@ -899,7 +921,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='monthly'
-                    name="performance"
+                    name="Report-Timeline"
                     type="radio"
                     value="monthly"
                     className="w-4 h-4"
@@ -918,7 +940,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='ROI'
-                    name="feature"
+                    name="Metrics"
                     type="checkbox"
                     value="ROI"
                     className="w-4 h-4"
@@ -929,7 +951,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='conversion-rate'
-                    name="feature"
+                    name="Metrics"
                     type="checkbox"
                     value="conversion-rate"
                     className="w-4 h-4"
@@ -940,7 +962,7 @@ const WebDesignForm = () => {
                 <div>
                   <input
                     id='reach'
-                    name="feature"
+                    name="Metrics"
                     type="checkbox"
                     value="reach"
                     className="w-4 h-4"
@@ -958,7 +980,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="socialmediabudget"
-                  name="socialmediabudget"
+                  name="Socialmedia_Budget"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -971,7 +993,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="strategy"
-                  name="strategy"
+                  name="Strategy"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -984,7 +1006,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="tools"
-                  name="tools"
+                  name="Tools"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1000,7 +1022,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="new-product"
-                  name="new-product"
+                  name="New-Product"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1013,7 +1035,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="promotion"
-                  name="promotion"
+                  name="Promotion"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1026,7 +1048,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="presence"
-                  name="presence"
+                  name="Social-Media-Presence"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1038,11 +1060,11 @@ const WebDesignForm = () => {
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platforms">
-                  Are there any specific platforms you would like to focus on or avoid?
+                  Are there any specific platforms you would like to focus on ?
                 </label>
                 <input
                   id="platforms"
-                  name="platforms"
+                  name="Focused-Platforms"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1055,7 +1077,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="post-time"
-                  name="post-time"
+                  name="Post-Time"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -1068,7 +1090,7 @@ const WebDesignForm = () => {
                 </label>
                 <input
                   id="trends"
-                  name="trends"
+                  name="Trends"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
