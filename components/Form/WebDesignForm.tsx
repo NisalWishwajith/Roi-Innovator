@@ -10,50 +10,7 @@ const WebDesignForm = () => {
 
   // Create a reference for the element
   const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-
-  // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
-
-  function Submit(a) {
-    a.preventDefault(); // Prevent the default form submission behavior.
-
-    const formEle = document.querySelector("form");
-    const formDatab = new FormData(formEle);
-
-    // Handle checkboxes by joining multiple selected values with a comma.
-    const feature = formDatab.getAll("Feature");
-    const intergration = formDatab.getAll("Intergration");
-    const content = formDatab.getAll("Content");
-    const userExperience = formDatab.getAll("UserExperience");
-
-    formDatab.set("Feature", feature.join(", "));
-    formDatab.set("Intergration", intergration.join(", "));
-    formDatab.set("Content", content.join(", "));
-    formDatab.set("UserExperience", userExperience.join(", "));
-
-    fetch("https://script.google.com/macros/s/AKfycbyuTLX-i-3lf8TuFdU3mR2sndQM35_Mm5C_kyV77gXKcikOfFluAjy6sjjMo5sNgAm4bw/exec", {
-      method: "POST",
-      body: formDatab,
-    })
-      .then((res) => res.text())
-      .then((data) => {
-        console.log("Response:", data);
-        if (data.includes("successfully sent")) {
-          window.location.href = "/thankyou";
-        } else {
-          console.error("Error in submission:", data);
-          alert("Submission failed. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Fetch error:", error);
-        alert("An error occurred. Please try again later.");
-      });
-  }
-
 
   return (
     <>
@@ -79,7 +36,39 @@ const WebDesignForm = () => {
         <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
 
           <div className="lg:w-full">
-            <form className="form" method="POST" onSubmit={(a) => Submit(a)}>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+
+                const feature = formData.getAll("Features");
+                const intergration = formData.getAll("Intergration");
+                const content = formData.getAll("Content-Types");
+                const userExperience = formData.getAll("User-Experience");
+            
+                formData.set("Features", feature.join(", "));
+                formData.set("Intergration", intergration.join(", "));
+                formData.set("Content-Types", content.join(", "));
+                formData.set("User-Experience", userExperience.join(", "));
+
+                try {
+                  const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                    method: 'POST',
+                    body: formData,
+                  });
+
+                  const result = await response.json();
+                  if (result.result === 'success') {
+                    window.location.href = '/thankyou';
+                  } else {
+                    alert(`Error: ${result.message}`);
+                  }
+                } catch (error) {
+                  console.error('Error submitting form:', error);
+                  alert('An error occurred. Please try again later.');
+                }
+              }}
+            >
               <motion.div
                 ref={ref1} // Attach the ref to the element
                 initial={{ y: -100, opacity: 0 }}
@@ -87,6 +76,8 @@ const WebDesignForm = () => {
                 transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
+                <input type="hidden" name="formName" value="Web_Design" />
+                <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
                 <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
                 <div className='pb-5'>
@@ -159,12 +150,12 @@ const WebDesignForm = () => {
 
 
                 <div className='pb-5'>
-                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="product">
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="products">
                     What products or services do you offer ?
                   </label>
                   <input
-                    id="product"
-                    name="Product"
+                    id="products"
+                    name="Products"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     required
@@ -176,7 +167,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="audience"
-                    name="Audience"
+                    name="Target-Audience"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     required
@@ -191,7 +182,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="goal"
-                    name="Goal"
+                    name="Primary-Goals"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder="ex:- Sell products, Generate leads, Provide information, Showcase a portfolio"
@@ -204,7 +195,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="secondarygoal"
-                    name="Secondarygoal"
+                    name="Secondary-Goals"
                     type="text"
                     placeholder='ex:- Building community, SEO ranking, Offering resources'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -223,7 +214,7 @@ const WebDesignForm = () => {
                     <label htmlFor='shopping-cart'>
                       <input
                         id='shopping-cart'
-                        name="Feature"
+                        name="Features"
                         type="checkbox"
                         value="shopping-cart"
                         className="w-4 h-4"
@@ -235,7 +226,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='booking-system'
-                      name="Feature"
+                      name="Features"
                       type="checkbox"
                       value="booking-system"
                       className="w-4 h-4"
@@ -246,7 +237,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='contact-form'
-                      name="Feature"
+                      name="Features"
                       type="checkbox"
                       value="contact-form"
                       className="w-4 h-4"
@@ -257,7 +248,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='user-account'
-                      name="Feature"
+                      name="Features"
                       type="checkbox"
                       value="user-account"
                       className="w-4 h-4"
@@ -326,7 +317,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='cms-yes'
-                      name="Cms"
+                      name="Need-CMS"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -338,7 +329,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='cms-no'
-                      name="Cms"
+                      name="Need-CMS"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -384,7 +375,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='easy-navigation'
-                      name="UserExperience"
+                      name="User-Experience"
                       type="checkbox"
                       value="easy-navigation"
                       className="w-4 h-4"
@@ -395,7 +386,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='fast-loading'
-                      name="UserExperience"
+                      name="User-Experience"
                       type="checkbox"
                       value="fast-loading"
                       className="w-4 h-4"
@@ -406,7 +397,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='mobile-responsive'
-                      name="UserExperience"
+                      name="User-Experience"
                       type="checkbox"
                       value="mobile-responsive"
                       className="w-4 h-4"
@@ -424,7 +415,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='text'
-                      name="Content"
+                      name="Content-Types"
                       type="checkbox"
                       value="text"
                       className="w-4 h-4"
@@ -436,7 +427,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='images'
-                      name="Content"
+                      name="Content-Types"
                       type="checkbox"
                       value="images"
                       className="w-4 h-4"
@@ -447,7 +438,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='videos'
-                      name="Content"
+                      name="Content-Types"
                       type="checkbox"
                       value="videos"
                       className="w-4 h-4"
@@ -458,7 +449,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='blogs'
-                      name="Content"
+                      name="Content-Types"
                       type="checkbox"
                       value="blogs"
                       className="w-4 h-4"
@@ -474,7 +465,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='content-creation-yes'
-                      name="ContentCreation"
+                      name="Need-ContentCreation"
                       type="radio"
                       value="yes"
                       className="w-4 h-4"
@@ -486,7 +477,7 @@ const WebDesignForm = () => {
                   <div>
                     <input
                       id='content-creation-no'
-                      name="ContentCreation"
+                      name="Need-ContentCreation"
                       type="radio"
                       value="no"
                       className="w-4 h-4"
@@ -504,7 +495,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="Seo"
-                    name="Seo"
+                    name="SEO"
                     type="text"
                     placeholder='ex:-Keyword optimization, Meta tags, Alt texts'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -549,7 +540,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="security"
-                    name="Security"
+                    name="Security-Level"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder='ex:- SSL certificate, Data protection, User Authentication'
@@ -608,7 +599,7 @@ const WebDesignForm = () => {
                   </label>
                   <input
                     id="budgetrange"
-                    name="Budgetrange"
+                    name="Budget-Range"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder='LKR'
@@ -637,7 +628,7 @@ const WebDesignForm = () => {
                     <div>
                       <input
                         id='assistant-yes'
-                        name="Assistant"
+                        name="Need-Assistant"
                         type="radio"
                         value="yes"
                         className="w-4 h-4"
@@ -649,7 +640,7 @@ const WebDesignForm = () => {
                     <div>
                       <input
                         id='assistant-no'
-                        name="Assistant"
+                        name="Need-Assistant"
                         type="radio"
                         value="no"
                         className="w-4 h-4"
@@ -670,7 +661,7 @@ const WebDesignForm = () => {
                       <label htmlFor='dedicated'>
                         <input
                           id='dedicated'
-                          name="Hosting"
+                          name="Hosting-Method"
                           type="radio"
                           value="dedicated"
                           className="w-4 h-4"
@@ -683,7 +674,7 @@ const WebDesignForm = () => {
                     <div>
                       <input
                         id='cloud-based'
-                        name="Hosting"
+                        name="Hosting-Method"
                         type="radio"
                         value="cloud-based"
                         className="w-4 h-4"
@@ -695,7 +686,7 @@ const WebDesignForm = () => {
                     <div>
                       <input
                         id='shared'
-                        name="Hosting"
+                        name="Hosting-Method"
                         type="radio"
                         value="shared"
                         className="w-4 h-4"
