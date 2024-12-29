@@ -53,7 +53,7 @@ export default function ScrollToService() {
             width={35}
             height={35}
             className="cursor-pointer"
-            onClick={() => window.open("https://wa.me/2348137877395", "_blank")}
+            onClick={() => window.open("https://wa.me/+94772012511", "_blank")}
           />     
       </div>
     </>
