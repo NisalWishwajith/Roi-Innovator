@@ -15,7 +15,7 @@ const WebDesignForm = () => {
   return (
     <>
       <section className='relative overflow-x-clip'>
-        <div className="absolute opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
+        <div className="absolute top-40 opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
           <div className="w-[330px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
         </div>
         <div className="absolute bottom-0 right-0 md:translate-x-72 translate-x-96 opacity-55 z-[-1]">
@@ -23,7 +23,7 @@ const WebDesignForm = () => {
         </div>
         <div className="flex items-center justify-between border-b-2 border-iceblue mb-8">
           <Link href="/">
-            <button className="rounded-md text-2xl p-2 mx-4 border-2 border-iceblue text-iceblue hover:text-white hover:border-white">
+            <button className="rounded-md text-xl p-1 ml-4 border-2 border-iceblue text-iceblue hover:text-white hover:border-white">
               <FaHome />
             </button>
           </Link>
@@ -98,7 +98,6 @@ const WebDesignForm = () => {
                 </label>
                 <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='ecommerce'>
                       <input
                         id='ecommerce'
                         name="Nature"
@@ -107,7 +106,6 @@ const WebDesignForm = () => {
                         className="w-4 h-4"
                         required
                       />
-                    </label>
                     <label htmlFor='ecommerce'> E-commerce </label>
                   </div>
 

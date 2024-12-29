@@ -23,10 +23,10 @@ const RoadMapItem = ({ id, stage, goal, activities, isEven }) => {
           <div className="roadmap-item__content bg-black/70 shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]">
             <h3 className="roadmap-item__stage"> {stage} </h3>
             <dl className="text-left align-top">
-              <dl className="font-semibold"> Goal : </dl>
-              <dd className="font-extralight text-sm">  {goal} </dd>
-              <dl className="font-semibold"> Activities : </dl>
-              <dd className="font-extralight text-sm"> {activities} </dd>
+              <dl className="font-semibold text-white"> Goal : </dl>
+              <dd className="font-extralight text-sm text-white">  {goal} </dd>
+              <dl className="font-semibold text-white"> Activities : </dl>
+              <dd className="font-extralight text-sm text-white"> {activities} </dd>
             </dl>
           </div>
         </div>

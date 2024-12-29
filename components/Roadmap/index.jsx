@@ -10,7 +10,7 @@ import {
 
 export const WebDesign = () => {
   return (
-    <div className="">
+    <div>
       <section className="roadmap">
           <div className="roadmap__timeline">
           <div className="roadmap__line"> </div>

@@ -10,7 +10,7 @@ const Video = () => {
 
   return (
     <section id="video" className="relative overflow-x-clip py-20">
-      <div className="container xl:px-10">
+      <div className="container px-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: -40 }}
@@ -33,13 +33,13 @@ const Video = () => {
       </div>
       <div className="flex justify-center items-center w-full m-auto">
         <motion.div
-          ref={ref} // Attach the ref to the element
+          ref={ref}
           initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} // Only animate when in view
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
           transition={{ duration: 0.5, delay: 0.5 , ease: "easeOut" }}
         >
           <a href="#service">
-          <button className="bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
+          <button className="bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
             Get a Free Consultation
           </button>
           </a>

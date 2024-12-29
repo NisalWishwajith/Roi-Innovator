@@ -9,7 +9,7 @@ export const Services = () => {
     { title: "Paid Advertising", imgSrc: "/images/services/Paid-Ads.png", order: "textFirst" },
     { title: "Mobile App Development", imgSrc: "/images/services/mobile-app-dev.png", order: "imageFirst" },
     { title: "Copy Writing", imgSrc: "/images/services/Copywriting.png", order: "textFirst" },
-    { title: "Content Writing", imgSrc: "/images/services/Content-Creation.png", order: "imageFirst" },
+    { title: "Content Creation", imgSrc: "/images/services/Content-Creation.png", order: "imageFirst" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export const Services = () => {
       <div className="absolute right-0 translate-x-80 opacity-20 md:opacity-55 z-[-1]">
         <div className="w-[340px] h-[1000px] rounded-full blur-[100px] bg-gradientbg2"></div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10">
         {/* Header Section */}
         <div className="text-center">
           <motion.h1

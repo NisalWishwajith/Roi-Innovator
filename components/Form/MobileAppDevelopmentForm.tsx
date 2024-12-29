@@ -20,7 +20,7 @@ const MobileAppDevelopmentForm = () => {
   return (
     <>
       <section className='relative overflow-x-clip'>
-        <div className="absolute opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
+        <div className="absolute top-40 opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
           <div className="w-[330px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
         </div>
         <div className="absolute bottom-0 right-0 md:translate-x-72 translate-x-96 opacity-55 z-[-1]">

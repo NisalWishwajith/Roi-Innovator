@@ -8,19 +8,13 @@ import { FaHome } from 'react-icons/fa';
 
 const ContentCreationForm = () => {
 
-  // Create a reference for the element
   const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-
-  // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
   return (
     <>
       <section className='relative overflow-x-clip'>
-        <div className="absolute opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
+        <div className="absolute top-40 opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
           <div className="w-[330px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
         </div>
         <div className="absolute bottom-0 right-0 md:translate-x-72 translate-x-96 opacity-55 z-[-1]">
@@ -637,7 +631,7 @@ const ContentCreationForm = () => {
                       id='platform-4'
                       name="Platforms"
                       type="checkbox"
-                      value="LinkedIn'"
+                      value="LinkedIn"
                       className="w-4 h-4"
                     />
                     <label htmlFor='platform-4'> LinkedIn </label>

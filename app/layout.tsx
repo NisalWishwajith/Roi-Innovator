@@ -1,20 +1,21 @@
 "use client";
+import Header from "./head";
 import Footer from "@/components/Footer";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { ThemeProvider } from "next-themes";
+
 
 export default function RootLayout({
-
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   useEffect(() => {
     const lenis = new Lenis();
-    function raf(time:number) {
+    function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -23,20 +24,18 @@ export default function RootLayout({
 
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+      <head>
+        <Header />
+      </head>
 
       <body className="bg-gradient-black-blue">
-        <Providers> 
+       <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
           {children}
           <Footer />
-        </Providers>
+       </ThemeProvider>
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+

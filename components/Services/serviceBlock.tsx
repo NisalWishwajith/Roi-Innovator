@@ -19,7 +19,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
         initial={{ opacity: 0, y: -40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
         transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-        className="relative flex flex-col md:flex-row items-center xl:px-40"
+        className="relative flex flex-col md:flex-row items-center xl:px-20"
       >
         {order === "imageFirst" ? (
           <>
@@ -29,7 +29,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className="w-72 h-auto m-auto p-8 bg-teal-400/5 rounded-2xl hover:scale-105 transition duration-300"
+                className={`border-2 border-teal-400 w-72 h-auto m-auto p-8 bg-teal-400/5 rounded-2xl hover:scale-105 transition duration-300`}
               />
             </div>
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-teal-400 hidden md:block"></div>
@@ -67,7 +67,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className="w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300"
+                className="border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300"
               />
             </div>
           </>

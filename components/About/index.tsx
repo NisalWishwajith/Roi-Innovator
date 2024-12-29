@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
 
   return (
     <section id="about" className="relative overflow-x-clip">
-      <div className="container lg:px-10">
+      <div className="container px-10">
         <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
