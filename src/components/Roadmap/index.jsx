@@ -1,4 +1,4 @@
-import RoadMapItem from '@/components/Roadmap/RoadMapItem';
+import RoadMapItem from '@/src/components/Roadmap/RoadMapItem';
 import { 
   webDesignData , 
   socialMediaManagementData , 
@@ -6,7 +6,7 @@ import {
   paidAdvertisingData , 
   copywritingData,
   contentCreationData
- } from '@/components/Roadmap/RoadmapData';
+ } from '@/src/components/Roadmap/RoadmapData';
 
 export const WebDesign = () => {
   return (

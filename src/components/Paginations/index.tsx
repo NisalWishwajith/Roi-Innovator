@@ -10,7 +10,7 @@ import {
   MobileAppDevelopment,
   Copywriting,
   Contentcreation,
-} from "@/components/Roadmap";
+} from "@/src/components/Roadmap";
 import { PricingpaidAdvertistment, PricingSocialMediamanagement, PricingWebDesign } from "../Pricing";
 
 const tabConfig = [

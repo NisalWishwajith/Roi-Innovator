@@ -1,8 +1,8 @@
 "use client";
 import Header from "./head";
-import Footer from "@/components/Footer";
+import Footer from "@/src/components/Footer";
 import "node_modules/react-modal-video/css/modal-video.css";
-import "../styles/index.css";
+import "@/src/styles/index.css";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import { ThemeProvider } from "next-themes";

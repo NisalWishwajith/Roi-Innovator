@@ -1,4 +1,4 @@
-import ContentCreationForm from "@/components/Form/ContentCreationForm";
+import ContentCreationForm from "@/src/components/Form/ContentCreationForm";
 
 export default function Home() {
 

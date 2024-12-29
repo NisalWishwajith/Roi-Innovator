@@ -1,4 +1,4 @@
-import CopyWritingForm from "@/components/Form/CopyWritngForm";
+import CopyWritingForm from "@/src/components/Form/CopyWritngForm";
 
 export default function Home() {
 

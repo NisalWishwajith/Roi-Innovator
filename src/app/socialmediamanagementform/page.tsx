@@ -1,4 +1,4 @@
-import SocialMediaManagementForm from "@/components/Form/SocialMediaManagementForm";
+import SocialMediaManagementForm from "@/src/components/Form/SocialMediaManagementForm";
 
 export default function Home() {
   return (
