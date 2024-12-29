@@ -3,9 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  output: "export", 
-  reactStrictMode: true,
-  basePath: '/Roi-Innovator',
+  output: "export"
 };
 
 module.exports = nextConfig;
