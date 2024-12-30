@@ -6,10 +6,10 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
 const testimonialData: Testimonial[] = [
-  { id: 1, name: "Innovative Pricing for Financial Flexibility", image: "/images/testimonials/1.png", delay: 0.1 },
-  { id: 2, name: "Strategic Partnership", image: "/images/testimonials/1.png", delay: 0.3 },
-  { id: 3, name: "Tailored Solutions", image: "/images/testimonials/1.png", delay: 0.6 },
-  { id: 4, name: "Comprehensive Services", image: "/images/testimonials/1.png", delay: 0.9 },
+  { id: 1, name: "Innovative Pricing for Financial Flexibility", image: "/images/benifits/innovative_pricing.png", delay: 0.1 , bg:"[#6879f8]" },
+  { id: 2, name: "Strategic Partnership", image: "/images/benifits/strategic_partnership.png", delay: 0.3 , bg:"#2dd4bf" },
+  { id: 3, name: "Tailored Solutions", image: "/images/benifits/tailored_solutions.png", delay: 0.6, bg:"[#aecdfb]"  },
+  { id: 4, name: "Comprehensive Services", image: "/images/benifits/comprehensive_service.png", delay: 0.9, bg:"[#4446ec]"  }
 ];
 
 const Testimonials = () => {

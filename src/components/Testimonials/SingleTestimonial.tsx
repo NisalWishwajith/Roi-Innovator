@@ -3,8 +3,8 @@ import Image from "next/image";
 
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const {  name, image } = testimonial;
-
+  const { name, image, bg } = testimonial;
+  const textcolor = testimonial.bg.replace(/\[|\]/g, "");
 
   return (
     <div className="w-full mt-10 ">
@@ -17,9 +17,12 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
           </div>
         
         
-        <div className="flex items-center border-t-2 border-white">
+        <div className="flex items-center border-t-2 border-iceblue">
           <div className="w-full mt-6">
-            <h5 className="mb-1 text-lg font-semibold text-white lg:text-base xl:text-xl text-center ">
+            
+          <h5
+              className={`mb-1 text-lg font-semibold lg:text-base xl:text-xl text-center text-[${textcolor}]`} 
+            >
               {name}
             </h5>
           </div>

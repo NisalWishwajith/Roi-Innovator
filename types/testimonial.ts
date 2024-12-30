@@ -3,4 +3,5 @@ export type Testimonial = {
   name: string;
   image: string;
   delay: number;
+  bg: string;
 };
