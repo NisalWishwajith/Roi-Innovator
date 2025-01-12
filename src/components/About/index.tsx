@@ -26,7 +26,7 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="relative overflow-x-clip">
       <div className="container px-10">
-        <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="pb-16 border-white/[.15] md:pb-20">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
 
@@ -66,9 +66,11 @@ const AboutSectionOne = () => {
                     className="mx-auto max-w-full rounded-2xl"
                   />
                 </div>
-              </motion.div>
+              </motion.div>         
             </div>
+           
           </div>
+          <hr className="md:mt-28 mt-10 xl:mx-10 border border-gray-400 opacity-80" />
         </div>
       </div>
     </section>

@@ -11,7 +11,11 @@ import {
   Copywriting,
   Contentcreation,
 } from "@/src/components/Roadmap";
-import { PricingpaidAdvertistment, PricingSocialMediamanagement, PricingWebDesign } from "../Pricing";
+import {
+  PricingpaidAdvertistment,
+  PricingSocialMediamanagement,
+  PricingWebDesign,
+} from "../Pricing";
 
 const tabConfig = [
   {
@@ -22,7 +26,7 @@ const tabConfig = [
      seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to 
      life and drive real business results. Let us transform your online presence today!`,
     component: <WebDesign />,
-    pricing:<PricingWebDesign />
+    pricing: <PricingWebDesign />,
   },
   {
     id: "socialmediamanagement",
@@ -31,7 +35,7 @@ const tabConfig = [
     and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent
     growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
     component: <SocialMediaManagement />,
-    pricing:<PricingSocialMediamanagement />
+    pricing: <PricingSocialMediamanagement />,
   },
   {
     id: "paidadvertising",
@@ -41,7 +45,7 @@ const tabConfig = [
      maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. 
      Let’s turn clicks into customers!`,
     component: <PaidAdvertising />,
-    pricing:<PricingpaidAdvertistment/>
+    pricing: <PricingpaidAdvertistment />,
   },
   {
     id: "mobileappdevelopment",
@@ -84,55 +88,64 @@ export default function TabsComponent() {
   const isInView4 = useInView(ref3, { once: true });
 
   return (
-    <section
-      id="service"
-      className="relative"
-    >
+    <section id="service" className="relative">
       {/* Header Section */}
       <div className="text-center">
-        <motion.h1
-          ref={ref}
-          initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-white text-3xl leading-tight md:text-[45px] font-bold p-4 xl:px-72 px-10 my-10"
-        >
-          Here&apos;s What You&apos;re Gonna Get in Each Service
-        </motion.h1>
-
         <div
-          className="bg-cover bg-no-repeat bg-center"
-          style={{ backgroundImage: "url('https://data.moonscdn.com/prompt/slices/2/watermarked/blue-road-black-background_JAKLl.png')" }}
+          className="bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://data.moonscdn.com/prompt/slices/2/watermarked/blue-road-black-background_JAKLl.png')",
+          }}
         >
-          <div className="bg-slate-950/85">
-            <div className="py-5 mt-10 container px-10 mx-auto z-10">
+          <div className="bg-slate-950/80">
+            <motion.h1
+              ref={ref}
+              initial={{ opacity: 0, y: -40 }}
+              animate={
+                isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+              }
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="p-10 text-3xl font-bold leading-tight text-white md:text-[45px] xl:px-72"
+            >
+              Here&apos;s What You&apos;re Gonna Get in Each Service
+            </motion.h1>
+            <div className="container z-10 mx-auto px-10 py-5">
               <motion.p
                 ref={ref1}
                 initial={{ opacity: 0, y: -40 }}
-                animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                animate={
+                  isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+                }
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-body-color text-xl md:text-2xl pt-10 pb-2"
+                className="pb-2 text-xl text-body-color md:text-2xl"
               >
                 Select a Service
               </motion.p>
-
 
               {/* Tabs */}
               <motion.ul
                 ref={ref2}
                 initial={{ opacity: 0, y: -40 }}
-                animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-                transition={{ duration: 0.5, delay:0.3, ease: "easeOut" }}
-                className="flex flex-wrap justify-center text-center text-xs md:text-base mb-4"
+                animate={
+                  isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+                }
+                transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+                className="mb-4 flex flex-wrap justify-center text-center text-xs md:text-base"
                 role="tablist"
               >
                 {tabConfig.map(({ id, label }) => (
-                  <li key={id} className="lg:w-auto w-1/2 p-1" role="presentation">
+                  <li
+                    key={id}
+                    className="w-1/2 p-1 lg:w-auto"
+                    role="presentation"
+                  >
                     <button
-                      className={`p-2 border rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === id
-                        ? "text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
-                        : "text-white hover:border-iceblue border-white hover:text-iceblue"
-                        }`}
+                      className={`w-full rounded-lg border p-2 lg:h-20 lg:w-48 ${
+                        activeTab === id
+                          ? "border-iceblue text-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
+                          : "border-white text-white hover:border-iceblue hover:text-iceblue"
+                      }`}
                       onClick={() => setActiveTab(id)}
                       type="button"
                       role="tab"
@@ -153,31 +166,39 @@ export default function TabsComponent() {
                         key={id}
                         ref={ref3}
                         initial={{ opacity: 0, y: -40 }}
-                        animate={isInView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-                        transition={{ duration: 0.5, delay:0.5 ,ease: "easeOut" }}
+                        animate={
+                          isInView3
+                            ? { opacity: 1, y: 0 }
+                            : { opacity: 0, y: -100 }
+                        }
+                        transition={{
+                          duration: 0.5,
+                          delay: 0.5,
+                          ease: "easeOut",
+                        }}
                         role="tabpanel"
                         aria-labelledby={`${id}-tab`}
                       >
-                        <h1 className="text-4xl md:text-6xl my-7 pt-3 pb-8 text-center font-bold underline bg-gradient-to-r from-primary via-iceblue to-dark bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient">
+                        <h1 className="animate-gradient my-7 bg-orange-500 bg-[length:200%_auto] bg-clip-text pb-8 pt-3 text-center text-4xl font-bold text-transparent underline md:text-6xl"> {/* kalin thibbe meka- gradient-to-r from-primary via-iceblue to-dark */}
                           {label}
                         </h1>
                         <div className="pb-5">
-                          <h1 className="border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] text-center">
+                          <h1 className="rounded-md border border-iceblue bg-black/90 p-2 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
                             Introduction
                           </h1>
-                          <p className="pt-2 text-md text-gray-300 font-extralight text-justify">
+                          <p className="text-md pt-2 text-justify font-extralight text-gray-300">
                             {introduction}
                           </p>
                         </div>
                         <div className="pb-5">
-                          <h1 className="my-2 border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] text-center">
+                          <h1 className="my-2 rounded-md border border-iceblue bg-black/90 p-2 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
                             Milestone Map
                           </h1>
                           {component}
                         </div>
                         <div className="flex justify-center">
                           <Link href={`/${id}form`}>
-                            <button className="shadow-[0_0_15px_5px_rgba(56,182,255,0.3)] bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold rounded-xl border-primary border hover:scale-110 transition-all duration-300 text-white">
+                            <button className="rounded-xl border border-primary bg-gradient-to-r from-cyan-400 to-blue-800 px-5 py-2 font-bold text-white shadow-[0_0_15px_5px_rgba(56,182,255,0.3)] transition-all duration-300 hover:scale-110 md:px-10 md:py-4 md:text-xl">
                               Get Started
                             </button>
                           </Link>
@@ -187,26 +208,28 @@ export default function TabsComponent() {
                 )}
               </div>
             </div>
+            <div>
+          {tabConfig.map(
+            ({ id, pricing }) =>
+              activeTab === id && (
+                <motion.div
+                  key={id}
+                  ref={ref4}
+                  initial={{ opacity: 0, y: -40 }}
+                  animate={
+                    isInView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+                  }
+                  transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                  role="tabpanel"
+                  aria-labelledby={`${id}-tab`}
+                >
+                  {pricing}
+                </motion.div>
+              )
+          )}
+        </div>
           </div>
         </div>
-        <div>
-                {tabConfig.map(
-                  ({ id, pricing }) =>
-                    activeTab === id && (                      
-                      <motion.div
-                      key={id}
-                      ref={ref4}
-                      initial={{ opacity: 0, y: -40 }}
-                      animate={isInView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-                      transition={{ duration: 0.5, delay:0.5 ,ease: "easeOut" }}
-                      role="tabpanel"
-                      aria-labelledby={`${id}-tab`}
-                    >                     
-                          {pricing}
-                    </motion.div>                         
-                    )
-                )}
-              </div>
       </div>
     </section>
   );

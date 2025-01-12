@@ -7,9 +7,9 @@ export const PricingWebDesign = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative py-10">
+    <section id="pricing" className="relative pb-20">
       <div className="container px-10">
-        <h1 className="text-white text-3xl md:text-[45px] font-bold p-4 text-center py-10"> Pricing Plans </h1>
+        <h1 className="text-white text-2xl font-bold p-4 text-center"> Packages for the service </h1>
         <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16">
@@ -27,7 +27,7 @@ export const PricingWebDesign = () => {
               className="flex cursor-pointer items-center"
             >
               <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
+                <div className="h-5 w-14 rounded-full bg-blue-900 shadow-inner"></div>
                 <div
                   className={`${isMonthly ? "" : "translate-x-full"
                     } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
@@ -51,7 +51,7 @@ export const PricingWebDesign = () => {
         {/* Pricing Cards Section */}
         <div
           className={`grid ${isMonthly
-              ? "grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
+              ? "grid-cols-1 gap-x-40 gap-y-10 md:grid-cols-2 lg:grid-cols-2"
               : "flex justify-center items-center"
             }`}
         >
@@ -59,7 +59,7 @@ export const PricingWebDesign = () => {
             // Render Plans Section Cards
             <>
               <PricingBox
-                packageName="Lite"
+                packageName="Basic Package"
                 price="40"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
@@ -72,20 +72,7 @@ export const PricingWebDesign = () => {
                 <OfferList text="Free Lifetime Updates" status="inactive" />
               </PricingBox>
               <PricingBox
-                packageName="Basic"
-                price="399"
-                duration="mo"
-                subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-              >
-                <OfferList text="All UI Components" status="active" />
-                <OfferList text="Use with Unlimited Projects" status="active" />
-                <OfferList text="Commercial Use" status="active" />
-                <OfferList text="Email Support" status="active" />
-                <OfferList text="Lifetime Access" status="active" />
-                <OfferList text="Free Lifetime Updates" status="inactive" />
-              </PricingBox>
-              <PricingBox
-                packageName="Plus"
+                packageName="Premium Package"
                 price="589"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
@@ -233,7 +220,7 @@ export const PricingSocialMediamanagement = () => {
             // Render Plans Section Cards
             <>
               <PricingBox
-                packageName="Lite"
+                packageName="Basic Package"
                 price="40"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
@@ -246,20 +233,7 @@ export const PricingSocialMediamanagement = () => {
                 <OfferList text="Free Lifetime Updates" status="inactive" />
               </PricingBox>
               <PricingBox
-                packageName="Basic"
-                price="399"
-                duration="mo"
-                subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-              >
-                <OfferList text="All UI Components" status="active" />
-                <OfferList text="Use with Unlimited Projects" status="active" />
-                <OfferList text="Commercial Use" status="active" />
-                <OfferList text="Email Support" status="active" />
-                <OfferList text="Lifetime Access" status="active" />
-                <OfferList text="Free Lifetime Updates" status="inactive" />
-              </PricingBox>
-              <PricingBox
-                packageName="Plus"
+                packageName="Premium Package"
                 price="589"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
@@ -401,7 +375,7 @@ export const PricingpaidAdvertistment = () => {
         {/* Pricing Cards Section */}
         <div
           className={`grid ${isMonthly
-              ? "grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
+              ? "grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-2"
               : "flex justify-center items-center"
             }`}
         >
@@ -409,7 +383,7 @@ export const PricingpaidAdvertistment = () => {
             // Render Plans Section Cards
             <>
               <PricingBox
-                packageName="Lite"
+                packageName="Basic Package"
                 price="40"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
@@ -422,20 +396,7 @@ export const PricingpaidAdvertistment = () => {
                 <OfferList text="Free Lifetime Updates" status="inactive" />
               </PricingBox>
               <PricingBox
-                packageName="Basic"
-                price="399"
-                duration="mo"
-                subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-              >
-                <OfferList text="All UI Components" status="active" />
-                <OfferList text="Use with Unlimited Projects" status="active" />
-                <OfferList text="Commercial Use" status="active" />
-                <OfferList text="Email Support" status="active" />
-                <OfferList text="Lifetime Access" status="active" />
-                <OfferList text="Free Lifetime Updates" status="inactive" />
-              </PricingBox>
-              <PricingBox
-                packageName="Plus"
+                packageName="Premium Package"
                 price="589"
                 duration="mo"
                 subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
