@@ -19,6 +19,7 @@ export const WebDesign = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}
@@ -42,6 +43,7 @@ export const SocialMediaManagement = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}
@@ -64,6 +66,7 @@ export const MobileAppDevelopment = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}
@@ -86,6 +89,7 @@ export const PaidAdvertising = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}
@@ -108,6 +112,7 @@ export const Copywriting = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}
@@ -132,6 +137,7 @@ export const Contentcreation = () => {
               key={item.id}
               id={item.id}
               stage={item.stage}
+              week={item.week}
               goal={item.goal}
               activities={item.activities}
               isEven={index % 2 === 0}

@@ -1,24 +1,21 @@
 const PricingBox = (props: {
-  price: string;
-  duration: string;
   packageName: string;
-  subtitle: string;
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { packageName, children } = props;
 
   return (
     <div className="container w-full">
       {/* Add relative positioning to the card container */}
       <div
-        className="border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144] hover:-translate-y-4 transition duration-300 ease-in-out"
+        className="2xl:h-[540px] lg:h-[600px] md:h-[750px] h-[550px] border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-center">
-          <h4 className="mb-8 text-4xl font-semibold text-white">{packageName}</h4>
+          <h4 className="text-4xl font-semibold text-primary">{packageName}</h4>
         </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div>{children}</div>
+        <hr className="my-7 border-primary"/>
+        <div> {children} </div>
         <div className="absolute bottom-20 right-0">
           <svg
             width="179"
