@@ -6,10 +6,11 @@ export const Services = () => {
   const services = [
     { title: "Web Design", imgSrc: "/images/services/Web-Design.png", order: "textFirst" },
     { title: "Social Media Management", imgSrc: "/images/services/Social-Media-Managment.png", order: "imageFirst" },
-    { title: "Paid Advertising", imgSrc: "/images/services/Paid-Ads.png", order: "textFirst" },
+    { title: "Content Creation", imgSrc: "/images/services/Content-Creation.png", order: "textFirst" },
     { title: "Mobile App Development", imgSrc: "/images/services/mobile-app-dev.png", order: "imageFirst" },
     { title: "Copy Writing", imgSrc: "/images/services/Copywriting.png", order: "textFirst" },
-    { title: "Content Creation", imgSrc: "/images/services/Content-Creation.png", order: "imageFirst" },
+    { title: "Paid Advertising", imgSrc: "/images/services/Paid-Ads.png", order: "imageFirst" },
+   
   ];
 
   return (
@@ -28,7 +29,7 @@ export const Services = () => {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-white text-3xl leading-tight md:text-[45px] font-bold p-4 xl:px-72"
+            className="text-iceblue text-3xl leading-tight md:text-[45px] font-bold p-4 xl:px-72"
           >
             Our Digital Marketing Services
           </motion.h1>

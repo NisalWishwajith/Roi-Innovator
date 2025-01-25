@@ -1,33 +1,21 @@
 const PricingBox = (props: {
-  price: string;
-  duration: string;
   packageName: string;
-  subtitle: string;
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { packageName, children } = props;
 
   return (
-    <div className="w-full">
+    <div className="container w-full">
       {/* Add relative positioning to the card container */}
       <div
-        className="wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]"
+        className="2xl:h-[540px] lg:h-[600px] md:h-[750px] h-[550px] border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
         data-wow-delay=".1s"
       >
-        <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-3xl font-bold text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-body-color">/{duration}</span>
-          </h3>
-          <h4 className="mb-2 text-xl font-bold text-white">{packageName}</h4>
+        <div className="flex items-center justify-center">
+          <h4 className="text-4xl font-semibold text-primary">{packageName}</h4>
         </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div>{children}</div>
-        <div className="mt-8 border-t border-white border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Start Free Trial
-          </button>
-        </div>
+        <hr className="my-7 border-primary"/>
+        <div> {children} </div>
         <div className="absolute bottom-20 right-0">
           <svg
             width="179"

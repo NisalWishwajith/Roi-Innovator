@@ -85,6 +85,7 @@ li {
 .roadmap-item__stage {
   font-size: 20px;
   margin-bottom: 0.5rem;
+  color: #38B6FF;
 }
 
 .roadmap-item__detail {
@@ -117,7 +118,6 @@ li {
 
   .roadmap-item__stage {
     font-size: 20px;
-    color: #38B6FF;
   }
 
   .roadmap-item--odd {
