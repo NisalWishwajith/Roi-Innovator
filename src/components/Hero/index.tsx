@@ -29,17 +29,15 @@ const Hero = () => {
                         transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-white font-bold text-4xl md:text-5xl lg:text-7xl mb-4 tracking-widest"
                     >
-                        WHAT WE ARE <br /> CAPABLE DOING
+                        WHAT WE CREATE 
                     </motion.h1>
-
-                
                     <motion.p
                         initial={{ opacity: 0, y: -40 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
-                        className="text-iceblue font-semibold tracking-widest text-sm md:text-md lg:text-xl leading-relaxed lg:px-20 py-5 bg-gradient-to-r from-primary via-iceblue to-blue-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient"
+                        className="text-iceblue tracking-widest text-md md:text-lg lg:text-4xl leading-relaxed lg:px-20 bg-gradient-to-r from-primary via-iceblue to-blue-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient"
                     >
-                        RoiInnovator Is a Place, Where We Transform <br /> Your Middle-Class Business Into a Powerful Digital Presence Tool for Business Growth.
+                        Discover the impact we bring to your brand.
                     </motion.p>
                 </div>
             </div>
