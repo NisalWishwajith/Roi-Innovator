@@ -38,7 +38,7 @@ const Video = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
           transition={{ duration: 0.5, delay: 0.5 , ease: "easeOut" }}
         >
-          <a href="#service">
+          <a href="#contact">
           <button className="bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
             Get a Free Consultation
           </button>

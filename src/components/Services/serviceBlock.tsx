@@ -28,7 +28,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className={`border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300`}
+                className={`border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300 hover:shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]`}
               />
             </div>
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-iceblue hidden shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] md:block"></div>
@@ -66,7 +66,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className="border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300"
+                className="border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300 hover:shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
               />
             </div>
           </>
