@@ -58,13 +58,13 @@ const Footer = () => {
                   Useful Links
                 </h2>
                 <ul>
-                  <li>
+                <li>
                     <a
-                      href="/"
+                      href="/#services"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Home{" "}
+                      Services{" "}
                     </a>
                   </li>
                   <li>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="/#video"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
@@ -111,15 +111,6 @@ const Footer = () => {
                     >
                       {" "}
                       Benifits{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/#services"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
-                    >
-                      {" "}
-                      Services{" "}
                     </a>
                   </li>
                 </ul>
@@ -148,15 +139,6 @@ const Footer = () => {
                     >
                       {" "}
                       Terms of Use{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
-                    >
-                      {" "}
-                      About{" "}
                     </a>
                   </li>
                 </ul>

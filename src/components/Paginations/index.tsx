@@ -141,7 +141,7 @@ export default function TabsComponent() {
                     role="presentation"
                   >
                     <button
-                      className={`w-full rounded-lg border p-2 lg:h-20 lg:w-48 ${
+                      className={`w-full text-[17px] leading-tight rounded-lg border-2 p-2 lg:h-20 lg:w-48 ${
                         activeTab === id
                           ? "border-iceblue text-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
                           : "border-white text-white hover:border-iceblue hover:text-iceblue"
@@ -179,20 +179,34 @@ export default function TabsComponent() {
                         role="tabpanel"
                         aria-labelledby={`${id}-tab`}
                       >
-                        <h1 className="animate-gradient my-7 bg-orange-500 bg-[length:200%_auto] bg-clip-text pb-8 pt-3 text-center text-4xl font-bold text-transparent underline md:text-6xl"> {/* kalin thibbe meka- gradient-to-r from-primary via-iceblue to-dark */}
+                        <h1 className="animate-gradient mt-7 bg-orange-500 bg-[length:200%_auto] bg-clip-text pb-8 pt-3 text-center text-4xl font-bold text-transparent underline md:text-6xl">
+                          {" "}
                           {label}
                         </h1>
                         <div className="pb-5">
-                          <h1 className="rounded-md border border-iceblue bg-black/90 p-2 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
-                            Introduction
+                          <h1 className="rounded-md p-2 text-center font-semibold md:text-2xl">
+                            Your brand, reimagined online
                           </h1>
-                          <p className="text-md pt-2 text-justify font-extralight text-gray-300">
-                            {introduction}
+                          <p className="text-md pt-2 text-center font-semibold text-gray-300">
+                            {" "}
+                            Beautifully designed, seamlessly functional, and
+                            built to make an impact. At ROIInnovators, we craft
+                            websites that inspire, engage, and deliver real
+                            results.
                           </p>
+                          <hr className="w-1/2 mx-auto my-5 md:mt-10 border-1 border-gray-300" />
+                          <div className="md:flex">
+                            <div> <div className="text-3xl font-semibold px-6 py-1 md:m-3"> Summery </div> </div>
+                            <div>
+                              <p className="text-lg pt-3 p-2 m-2 text-justify text-gray-300">
+                                {introduction}
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                        <div className="pb-5">
+                        <div className="w-content m-auto pb-5">
                           <h1 className="my-2 rounded-md border border-iceblue bg-black/90 p-2 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
-                            Milestone Map
+                          How We Work
                           </h1>
                           {component}
                         </div>
@@ -209,25 +223,31 @@ export default function TabsComponent() {
               </div>
             </div>
             <div>
-          {tabConfig.map(
-            ({ id, pricing }) =>
-              activeTab === id && (
-                <motion.div
-                  key={id}
-                  ref={ref4}
-                  initial={{ opacity: 0, y: -40 }}
-                  animate={
-                    isInView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
-                  }
-                  transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                  role="tabpanel"
-                  aria-labelledby={`${id}-tab`}
-                >
-                  {pricing}
-                </motion.div>
-              )
-          )}
-        </div>
+              {tabConfig.map(
+                ({ id, pricing }) =>
+                  activeTab === id && (
+                    <motion.div
+                      key={id}
+                      ref={ref4}
+                      initial={{ opacity: 0, y: -40 }}
+                      animate={
+                        isInView4
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: -100 }
+                      }
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.5,
+                        ease: "easeOut",
+                      }}
+                      role="tabpanel"
+                      aria-labelledby={`${id}-tab`}
+                    >
+                      {pricing}
+                    </motion.div>
+                  )
+              )}
+            </div>
           </div>
         </div>
       </div>

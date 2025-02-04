@@ -27,15 +27,15 @@ const Hero = () => {
                         initial={{ opacity: 0, y: -40 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="text-white font-bold text-4xl md:text-5xl lg:text-7xl mb-4 tracking-widest"
+                        className="text-white font-bold text-4xl md:text-5xl lg:text-7xl mb-4 px-20 "
                     >
-                        WHAT WE CREATE 
+                        WHAT WE ARE CAPABLE OF DOING  
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: -40 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
-                        className="text-iceblue tracking-widest text-md md:text-lg lg:text-4xl leading-relaxed lg:px-20 bg-gradient-to-r from-primary via-iceblue to-blue-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient"
+                        className="text-iceblue tracking-wide text-sm md:text-md font-semibold lg:text-3xl lg:px-20 bg-gradient-to-r from-primary via-iceblue to-blue-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient"
                     >
                         Discover the impact we bring to your brand.
                     </motion.p>

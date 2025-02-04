@@ -22,7 +22,7 @@ const Video = () => {
 
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/UK1zH4L2DOQ?si=U01QUBkIwOQbquQ_"
+                src="https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP"
                 title="YouTube video player"
                 allow=""
                 allowFullScreen
