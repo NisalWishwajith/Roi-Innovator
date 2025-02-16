@@ -1,7 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Particle from "./Particle";
+import Particle from "@/src/components/Common/Particle";
 
 const Hero = () => {
     const ref = useRef(null);
@@ -9,9 +9,9 @@ const Hero = () => {
 
     return (
         <section id="hero" className="relative h-screen overflow-hidden">
-            <div id="tsparticles" className="absolute inset-0 -z-10">
-                <Particle />
-            </div>
+<div id="tsparticles1" className="absolute inset-0 z-96">
+  <Particle id="particles-hero" zIndex={-50} />
+</div>
 
             <div className="absolute inset-0 flex justify-center opacity-70 -translate-y-60 -z-10">
                 <div className="w-[1000px] h-[400px] bg-gradientbg blur-[100px] rounded-full"></div>

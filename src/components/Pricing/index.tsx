@@ -3,16 +3,20 @@ import { useState } from "react";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 import { MdOutlineControlPoint } from "react-icons/md";
+import Particle from "@/src/components/Common/Particle";
 
 export const PricingWebDesign = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
     <section id="pricing" className="relative pb-20">
+      {/* <div id="tsparticles2" className="top z-96 absolute inset-0">
+        <Particle id="particles-pricing" zIndex={-40} />
+      </div> */}
       <div className="container px-10">
         <h1 className="p-4 text-center text-2xl font-bold text-white">
           {" "}
-          Packages for the service{" "}
+          Packages for the Service{" "}
         </h1>
         <div className="w-full">
           <div className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16">

@@ -68,7 +68,7 @@ const AboutSectionOne = () => {
                 </div>
               </motion.div>         
             </div>
-           
+        
           </div>
           <hr className="md:mt-28 mt-10 xl:mx-10 border border-gray-400 opacity-80" />
         </div>

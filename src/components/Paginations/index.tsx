@@ -17,6 +17,7 @@ import {
   PricingWebDesign,
 } from "../Pricing";
 
+
 const tabConfig = [
   {
     id: "webdesign",
@@ -204,8 +205,8 @@ export default function TabsComponent() {
                             </div>
                           </div>
                         </div>
-                        <div className="w-content m-auto pb-5">
-                          <h1 className="my-2 rounded-md border border-iceblue bg-black/90 p-2 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
+                        <div className="m-auto pb-5">
+                          <h1 className="my-2 m-auto flex justify-center w-fit text-center w-1/2 rounded-md border border-iceblue bg-black/90 py-2 px-6 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
                           How We Work
                           </h1>
                           {component}
