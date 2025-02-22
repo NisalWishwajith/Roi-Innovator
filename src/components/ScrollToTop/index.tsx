@@ -49,8 +49,8 @@ export default function ScrollToService() {
 
       <div className="fixed right-8 top-8 z-[99]">
         <Link href="https://wa.me/+94772012511">
-          <button className="flex items-center justify-center gap-2 rounded-lg border border-orange-500 bg-dark p-2 shadow-[0_0_15px_5px_rgba(255,87,51,0.2)] transition duration-100 hover:scale-105">
-            <p className="md:text-md text-xs text-orange-500"> Contact Us on </p>
+          <button className="flex items-center justify-center gap-2 rounded-2xl border border-orange-500 bg-dark p-2 shadow-[0_0_15px_5px_rgba(255,87,51,0.3)] transition duration-100 hover:scale-105">
+            <p className="md:text-md text-xs text-orange-500 font-semibold"> Contact Us on </p>
             <FaWhatsapp className="text-orange-500" />
           </button>
         </Link>
