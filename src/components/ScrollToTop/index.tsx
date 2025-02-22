@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaAngleUp } from "react-icons/fa";
-import Image from "next/image";
+import { FaAngleUp, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 export default function ScrollToService() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,11 +21,9 @@ export default function ScrollToService() {
     const paginationSection = document.getElementById("service");
     if (!paginationSection) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    });
 
     observer.observe(paginationSection);
 
@@ -39,22 +37,23 @@ export default function ScrollToService() {
           <div
             onClick={scrollToService}
             aria-label="scroll to service"
-            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-black border-2 border-iceblue text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-lg hover:scale-105"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border-2 border-iceblue bg-black text-white shadow-md transition duration-300 ease-in-out hover:scale-105 hover:bg-opacity-80 hover:shadow-lg"
           >
-            <span className="text-center leading-1 text-lg"> <FaAngleUp /> </span>
+            <span className="leading-1 text-center text-lg">
+              {" "}
+              <FaAngleUp />{" "}
+            </span>
           </div>
         )}
       </div>
 
-      <div className="fixed top-8 right-8 z-[99]">
-          <Image
-            src="/images/whatsapp.png"
-            alt="whatsapp"
-            width={35}
-            height={35}
-            className="cursor-pointer"
-            onClick={() => window.open("https://wa.me/+94772012511", "_blank")}
-          />     
+      <div className="fixed right-8 top-8 z-[99]">
+        <Link href="https://wa.me/+94772012511">
+          <button className="flex items-center justify-center gap-2 rounded-lg border border-orange-500 bg-dark p-2 shadow-[0_0_15px_5px_rgba(255,87,51,0.2)] transition duration-100 hover:scale-105">
+            <p className="md:text-md text-xs text-orange-500"> Contact Us on </p>
+            <FaWhatsapp className="text-orange-500" />
+          </button>
+        </Link>
       </div>
     </>
   );

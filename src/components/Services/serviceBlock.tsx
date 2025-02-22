@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 
 function ServiceBlock({ title, imgSrc, order, index }) {
@@ -23,6 +24,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
         {order === "imageFirst" ? (
           <>
             <div className="md:w-1/2 p-4 order-2 md:order-1">
+            <Link href="/#service">
               <Image
                 src={imgSrc}
                 width={300}
@@ -30,6 +32,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 alt={title}
                 className={`border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300 hover:shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]`}
               />
+              </Link>
             </div>
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-iceblue hidden shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] md:block"></div>
             <div className="absolute left-1/2 transform -translate-x-1/2 bg-iceblue shadow-lg rounded-xl w-10 h-10 items-center justify-center text-xl font-bold text-dark hidden md:block">
@@ -61,6 +64,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
               </p>
             </div>
             <div className="md:w-1/2 p-4">
+            <Link href="/#service">
               <Image
                 src={imgSrc}
                 width={300}
@@ -68,6 +72,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 alt={title}
                 className="border-2 border-iceblue w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300 hover:shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
               />
+              </Link>
             </div>
           </>
         )}

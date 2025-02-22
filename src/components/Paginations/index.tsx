@@ -138,7 +138,7 @@ export default function TabsComponent() {
                 {tabConfig.map(({ id, label }) => (
                   <li
                     key={id}
-                    className="w-1/2 p-1 lg:w-auto"
+                    className="w-full md:w-1/2 p-1 lg:w-auto"
                     role="presentation"
                   >
                     <button
@@ -180,7 +180,7 @@ export default function TabsComponent() {
                         role="tabpanel"
                         aria-labelledby={`${id}-tab`}
                       >
-                        <h1 className="animate-gradient mt-7 bg-orange-500 bg-[length:200%_auto] bg-clip-text pb-8 pt-3 text-center text-4xl font-bold text-transparent underline md:text-6xl">
+                        <h1 className="mt-7 text-orange-500 bg-[length:200%_auto pb-8 pt-3 text-center text-4xl font-bold text-transparent md:text-6xl">
                           {" "}
                           {label}
                         </h1>
@@ -188,18 +188,19 @@ export default function TabsComponent() {
                           <h1 className="rounded-md p-2 text-center font-semibold md:text-2xl">
                             Your brand, reimagined online
                           </h1>
-                          <p className="text-md pt-2 text-center font-semibold text-gray-300">
-                            {" "}
+                          <p className="text-sm md:text-md pt-2 text-center md:font-semibold text-gray-300">
                             Beautifully designed, seamlessly functional, and
                             built to make an impact. At ROIInnovators, we craft
                             websites that inspire, engage, and deliver real
                             results.
                           </p>
-                          <hr className="w-1/2 mx-auto my-5 md:mt-10 border-1 border-gray-300" />
+                          <hr className="md:w-1/2 mx-auto my-5 md:mt-10 border-1 border-gray-300" />
                           <div className="md:flex">
-                            <div> <div className="text-3xl font-semibold px-6 py-1 md:m-3"> Summery </div> </div>
+                            <div> 
+                              <div className="text-2xl md:text-3xl font-semibold px-6 md:m-3"> Summery </div> 
+                            </div>
                             <div>
-                              <p className="text-lg pt-3 p-2 m-2 text-justify text-gray-300">
+                              <p className="text-xs md:text-md lg:text-lg md:pt-3 m-2 text-justify text-gray-300">
                                 {introduction}
                               </p>
                             </div>

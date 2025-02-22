@@ -1,49 +1,65 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
-export default function Particle({ id = "particles-default", zIndex = -99 }) {
+export default function Particle() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
-    console.log(`Particle component mounted: ${id}`);
+    console.log("init");
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
     }).then(() => {
       setInit(true);
     });
-  }, [id]);
+  }, []);
+
+  const particlesLoaded = (tsparticles) => {};
 
   return (
     <>
       {init && (
         <Particles
-          id={id} // Use custom ID
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
           style={{
-            zIndex: zIndex,
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-          }}
-          options={{
+            zIndex: -99,
+            position: "absolute"
+
+          }}  
+          options={
+            {
             fullScreen: {
               enable: false,
-              zIndex: zIndex,
+              zIndex: -99,
             },
             fpsLimit: 120,
             interactivity: {
               events: {
-                onClick: { enable: false, mode: "push" },
-                onHover: { enable: true, mode: "repulse" },
+                onClick: {
+                  enable: false,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
                 resize: true,
               },
               modes: {
-                push: { quantity: 4 },
-                repulse: { distance: 140, duration: 0.4 },
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 140,
+                  duration: 0.4,
+                },
               },
             },
             particles: {
-              color: { value: "#bae6fd" },
+              color: {
+                value: "#bae6fd",
+              },
               links: {
                 color: "#e0f2fe",
                 distance: 150,
@@ -54,15 +70,28 @@ export default function Particle({ id = "particles-default", zIndex = -99 }) {
               move: {
                 direction: "none",
                 enable: true,
-                outModes: { default: "bounce" },
+                outModes: {
+                  default: "bounce",
+                },
                 random: false,
                 speed: 1.2,
                 straight: false,
               },
-              number: { density: { enable: false }, value: 70 },
-              opacity: { value: 0.5 },
-              shape: { type: "circle" },
-              size: { value: { min: 1, max: 5 } },
+              number: {
+                density: {
+                  enable: false,
+                },
+                value: 70,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
             },
             detectRetina: true,
           }}

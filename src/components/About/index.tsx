@@ -37,7 +37,7 @@ const AboutSectionOne = () => {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="wow fadeInUp mb-5"
               >
-                <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
+                <h1 className="mb-3 text-2xl lg:text-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
                   About Our Company
                 </h1>
                 <p className="text-justify !leading-relaxed text-body-color md:text-lg text-sm">
@@ -56,7 +56,7 @@ const AboutSectionOne = () => {
                 className="wow fadeInUp"
               >
                 <div
-                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
+                  className="wow fadeInUp mt-10 relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
                   data-wow-delay=".2s"
                 >
                   <Image
