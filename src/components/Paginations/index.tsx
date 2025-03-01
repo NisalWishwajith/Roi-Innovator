@@ -180,7 +180,7 @@ export default function TabsComponent() {
                         role="tabpanel"
                         aria-labelledby={`${id}-tab`}
                       >
-                        <h1 className="mt-7 text-orange-500 bg-[length:200%_auto pb-8 pt-3 text-center text-4xl font-bold text-transparent md:text-6xl">
+                        <h1 className="mt-7 text-orange-500 pb-8 pt-3 text-center text-4xl font-bold md:text-6xl">
                           {" "}
                           {label}
                         </h1>

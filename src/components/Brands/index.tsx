@@ -5,8 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const brandsData: Brand[] = [
-  { id: 1, name: "Custom Tailored Design", image: "/images/brands/1.png" },
-  { id: 2, name: "7-day Guarantee", image: "/images/brands/3.png" },
+  { id: 1, name: "Risk Free Start", image: "/images/brands/1.png" },
+  { id: 2, name: "Money Back Guarantee", image: "/images/brands/3.png" },
   { id: 3, name: "Always Up-to-date", image: "/images/brands/2.png" },
   { id: 4, name: "Secure Purchase", image: "/images/brands/4.png" },
 ];
