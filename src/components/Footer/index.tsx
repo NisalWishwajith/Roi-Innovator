@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-white">
-                  Other Links
+                  Quick Links
                 </h2>
                 <ul>
                   <li>
@@ -106,11 +106,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/#benifits"
+                      href="/#benefits"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Benifits{" "}
+                      Benefits{" "}
                     </a>
                   </li>
                 </ul>

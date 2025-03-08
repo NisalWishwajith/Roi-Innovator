@@ -6,10 +6,10 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
 const testimonialData: Testimonial[] = [
-  { id: 1, name: "Innovative Pricing for Financial Flexibility", image: "/images/benifits/1.png", delay: 0.1 , bg:"[#6879f8]" },
-  { id: 2, name: "Strategic Partnership", image: "/images/benifits/strategic_partnership.png", delay: 0.3 , bg:"#2dd4bf" },
-  { id: 3, name: "Tailored Solutions", image: "/images/benifits/tailored_solutions.png", delay: 0.6, bg:"[#aecdfb]"  },
-  { id: 4, name: "Comprehensive Services", image: "/images/benifits/comprehensive_service.png", delay: 0.9, bg:"[#4446ec]"  }
+  { id: 1, name: "Innovative Pricing for Financial Flexibility", image: "/images/benefits/1.png", delay: 0.1 , bg:"[#6879f8]" },
+  { id: 2, name: "Strategic Partnership", image: "/images/benefits/strategic_partnership.png", delay: 0.3 , bg:"#2dd4bf" },
+  { id: 3, name: "Tailored Solutions", image: "/images/benefits/tailored_solutions.png", delay: 0.6, bg:"[#aecdfb]"  },
+  { id: 4, name: "Comprehensive Services", image: "/images/benefits/comprehensive_service.png", delay: 0.9, bg:"[#4446ec]"  }
 ];
 
 const Testimonials = () => {
@@ -17,7 +17,7 @@ const Testimonials = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="benifits" className="relative py-16 md:py-20 lg:py-28 overflow-x-clip">
+    <section id="benefits" className="relative py-16 md:py-20 lg:py-28 overflow-x-clip">
       <div className="absolute opacity-20 justify-center z-[-1] transition-all translate-x-80 translate-y-24">
         <div className="w-[800px] h-[600px] rounded-full blur-[100px] bg-gradientbg"></div>
       </div>

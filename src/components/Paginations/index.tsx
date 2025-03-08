@@ -12,65 +12,70 @@ import {
   Contentcreation,
 } from "@/src/components/Roadmap";
 import {
-  PricingpaidAdvertistment,
+  PricingPaidAdvertistment,
   PricingSocialMediamanagement,
   PricingWebDesign,
+  PricingContenCreating,
+  PricingMobileAppDevelopment,
+  PricingCopyWriting
 } from "../Pricing";
+import { Topic } from "@mui/icons-material";
 
 
 const tabConfig = [
   {
     id: "webdesign",
     label: "Web Design",
-    introduction: `At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality. Our web design services
-     ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized websites that deliver a 
-     seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to 
-     life and drive real business results. Let us transform your online presence today!`,
+    topic: "Your brand, reimagined online",
+    def: "Beautifully designed, seamlessly functional, and built to make an impact. At ROIInnovators, we craft websites that inspire, engage, and deliver real results.",
+    introduction:"At ROllnnovators, we craft custom websites that blend stunning design with flawless functionality. Our web design services ensure your site reflects your brand's Identity, while our development team builds responsive, SEO-optimized websites that deliver a seamless user experience across all devices. Whether it's a sleek landing page or a full e-commerce platform, we bring your vision to life and drive real business results. Let us transform your online presence today!",
     component: <WebDesign />,
     pricing: <PricingWebDesign />,
   },
   {
     id: "socialmediamanagement",
     label: "Social Media Management",
-    introduction: `At ROIInnovators, we manage your social media so you can focus on growing your business. We create engaging content, build brand awareness, 
-    and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent
-    growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
+    topic: "Your brand, amplified.",
+    def: "We craft content that captivates, strategies that grow, and connections that matter, turning followers into loyal customers. Let’s transform your social media into a powerful growth engine.",
+    introduction: `At ROIInnovators, we manage your social media so you can focus on growing your business. We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
     component: <SocialMediaManagement />,
     pricing: <PricingSocialMediamanagement />,
   },
   {
     id: "paidadvertising",
     label: "Paid Advertising",
-    introduction: `At ROIInnovators, our paid advertising services are designed to drive targeted traffic and boost conversions.
-     We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure 
-     maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. 
-     Let’s turn clicks into customers!`,
+    topic: "Reach your audience. Drive results.",
+    def: "Tailored campaigns that turn clicks into customers and maximize your ROI—every dollar optimized for impact.",
+    introduction: `At ROIInnovators, our paid advertising services are designed to drive targeted traffic and boost conversions. We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!`,
     component: <PaidAdvertising />,
-    pricing: <PricingpaidAdvertistment />,
+    pricing: <PricingPaidAdvertistment />,
   },
   {
     id: "mobileappdevelopment",
     label: "Mobile App Development",
-    introduction: `At ROIInnovators, we create custom mobile apps that elevate your business. From concept to launch, we develop intuitive, 
-    high-performance apps for iOS and Android, designed to engage users and streamline your operations. Whether it’s an app to boost customer
-     interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!`,
+    topic: "Apps that elevate your business",
+    def: "From concept to launch, we develop intuitive, high-performance apps. Intuitive, high-performing, and tailored to your vision—designed to captivate users and drive results.",
+    introduction: `At ROIInnovators, we craft custom mobile experiences that connect, engage, and perform. From iOS to Android, our apps are designed to simplify, streamline, and elevate. Whether enhancing customer interaction or optimizing operations, we turn your ideas into impactful, user-centered solutions. Ready to bring your app vision to life?`,
     component: <MobileAppDevelopment />,
+    pricing: <PricingMobileAppDevelopment />,
   },
   {
     id: "copywriting",
     label: "Copy Writing",
-    introduction: `At ROIInnovators, our copywriting services focus on crafting compelling text that grabs attention and drives action. Copywriting 
-    is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage 
-    with your business. Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!`,
+    topic: "Words that work",
+    def: "Persuasive, impactful, and tailored to inspire action—our copy turns visitors into customers and your message into results.",
+    introduction: `At ROIInnovators, our copywriting services focus on crafting compelling text that grabs attention and drives action. Copywriting is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage with your business. Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!`,
     component: <Copywriting />,
+    pricing: <PricingCopyWriting />,
   },
   {
     id: "contentcreation",
     label: "Content Creation",
-    introduction: `At ROIInnovators, we create captivating content that speaks to your audience and elevates your brand. From eye-catching visuals to 
-    engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! Let’s showcase 
-    what we can do and help your business stand out online.`,
-    component: <Contentcreation />,
+    topic: "Content that connects.",
+    def: "From stunning visuals to engaging videos, we bring your brand to life. Start with a free video and see how we make your business stand out.",
+    introduction: `At ROIInnovators, we create captivating content that speaks to your audience and elevates your brand. From eye-catching visuals to engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! Let’s showcase what we can do and help your business stand out online.`,
+    component: <Contentcreation/>,
+    pricing: <PricingContenCreating />,
   },
 ];
 
@@ -142,7 +147,7 @@ export default function TabsComponent() {
                     role="presentation"
                   >
                     <button
-                      className={`w-full text-[17px] leading-tight rounded-lg border-2 p-2 lg:h-20 lg:w-48 ${
+                      className={`w-full md:text-[17px] leading-tight rounded-lg border md:border-2 p-1 md:p-2 lg:h-20 lg:w-48 ${
                         activeTab === id
                           ? "border-iceblue text-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.3)]"
                           : "border-white text-white hover:border-iceblue hover:text-iceblue"
@@ -161,7 +166,7 @@ export default function TabsComponent() {
               {/* Tab Content */}
               <div>
                 {tabConfig.map(
-                  ({ id, label, introduction, component }) =>
+                  ({ id, label, introduction, component, topic , def }) =>
                     activeTab === id && (
                       <motion.div
                         key={id}
@@ -186,18 +191,15 @@ export default function TabsComponent() {
                         </h1>
                         <div className="pb-5">
                           <h1 className="rounded-md p-2 text-center font-semibold md:text-2xl">
-                            Your brand, reimagined online
+                            {topic}
                           </h1>
                           <p className="text-sm md:text-md pt-2 text-center md:font-semibold text-gray-300">
-                            Beautifully designed, seamlessly functional, and
-                            built to make an impact. At ROIInnovators, we craft
-                            websites that inspire, engage, and deliver real
-                            results.
+                           {def}
                           </p>
                           <hr className="md:w-1/2 mx-auto my-5 md:mt-10 border-1 border-gray-300" />
                           <div className="md:flex">
                             <div> 
-                              <div className="text-2xl md:text-3xl font-semibold px-6 md:m-3"> Summery </div> 
+                              <div className="text-2xl md:text-3xl font-semibold px-6 md:m-3"> Summary </div> 
                             </div>
                             <div>
                               <p className="text-xs md:text-md lg:text-lg md:pt-3 m-2 text-justify text-gray-300">
@@ -208,7 +210,7 @@ export default function TabsComponent() {
                         </div>
                         <div className="m-auto pb-5">
                           <h1 className="my-2 m-auto flex justify-center w-fit text-center w-1/2 rounded-md border border-iceblue bg-black/90 py-2 px-6 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
-                          How We Work
+                          Our Process
                           </h1>
                           {component}
                         </div>
