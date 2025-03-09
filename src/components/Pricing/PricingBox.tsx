@@ -8,13 +8,13 @@ const PricingBox = (props: {
     <div className="container w-full">
       {/* Add relative positioning to the card container */}
       <div
-        className="2xl:h-[540px] lg:h-[620px] md:h-[750px] h-[550px] h-auto border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
+        className="2xl:h-[580px] lg:h-[600px] md:h-[690px] h-[550px] h-auto border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-center">
-          <h4 className="text-4xl font-semibold text-primary"> {packageName} </h4>
+          <h4 className="lg:text-2xl md:text-xl xl:text-4xl text-2xl font-semibold text-primary"> {packageName} </h4>
         </div>
-        <hr className="my-7 border-primary"/>
+        <hr className="lg:my-7 my-2 border-primary"/>
         <div> {children} </div>
         <div className="absolute bottom-20 right-0">
           <svg

@@ -73,17 +73,11 @@ export const PricingWebDesign = () => {
                     Essentials for a stunning online presence.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Custom 3-page website (Home, About, Contact)"
-                  status="active"
-                />
+                <OfferList text="Custom 3-page website (Home, About, Contact)" status="active" />
                 <OfferList text="Mobile-responsive design" status="active" />
                 <OfferList text="Clean, modern templates" status="active" />
                 <OfferList text="Basic SEO optimization" status="active" />
-                <OfferList
-                  text="Social media links & contact form"
-                  status="active"
-                />
+                <OfferList text="Social media links & contact form" status="active"/>
                 <OfferList text="Google Analytics setup" status="active" />
 
                 <div className="mb-2 mt-5 flex">
@@ -588,23 +582,17 @@ export const PricingPaidAdvertistment = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Essentials for a stunning online presence.{" "}
+                    Smart Ads. Better Results.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Custom 3-page website (Home, About, Contact)"
-                  status="active"
-                />
-                <OfferList text="Mobile-responsive design" status="active" />
-                <OfferList text="Clean, modern templates" status="active" />
-                <OfferList text="Basic SEO optimization" status="active" />
-                <OfferList
-                  text="Social media links & contact form"
-                  status="active"
-                />
-                <OfferList text="Google Analytics setup" status="active" />
+                <OfferList text="Up to 3 platforms (e.g., Facebook, Instagram, Google Ads)" status="active" />
+                <OfferList text="Up to $2,000/month (ad spend not included)" status="active" />
+                <OfferList text="Awareness, engagement, traffic, and conversion-focused campaigns" status="active" />
+                <OfferList text="8 custom ads per month (static, carousel, and short videos)" status="active" />
+                <OfferList text="Advanced audience strategies, including lookalikes and retargeting" status="active" />
+                <OfferList text="Daily monitoring, A/B testing, and real-time adjustments" status="active" />
 
-                <div className="mb-2 mt-5 flex">
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -626,7 +614,8 @@ export const PricingPaidAdvertistment = () => {
                 </div>
                 <OfferList text="2-3 weeks delivery" status="active" />
                 <OfferList text="1 Revision Round" status="active" />
-                <OfferList text="1-Month Email Support" status="active" />
+                <OfferList text="1-Month Email Support" status="active" /> */}
+
               </PricingBox>
 
               <PricingBox packageName="Premium Package">
@@ -634,34 +623,18 @@ export const PricingPaidAdvertistment = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Elevate your brand with tailored solutions.{" "}
+                    Data-Driven Ads. Extraordinary Growth.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Fully custom 5-page website: Home, About, Services, Blog, Contact"
-                  status="active"
-                />
-                <OfferList
-                  text="Mobile-responsive & uniquely designed to match your brand"
-                  status="active"
-                />
-                <OfferList
-                  text="Advanced SEO for higher search visibility"
-                  status="active"
-                />
-                <OfferList
-                  text="Social media and email marketing integration"
-                  status="active"
-                />
-                <OfferList
-                  text="Blog, e-commerce, or booking system setup"
-                  status="active"
-                />
-                <OfferList
-                  text="Analytics with detailed reports"
-                  status="active"
-                />
+                <OfferList text="Unlimited platforms (e.g., Facebook, Instagram, Google Ads, LinkedIn)" status="active" />
+                <OfferList text="Up to $10,000/month (ad spend not included)" status="active" />
+                <OfferList text="Comprehensive strategies, including seasonal and event-based campaigns" status="active"/>
+                <OfferList text="Unlimited custom ads with premium visuals and video content" status="active"/>
+                <OfferList text="AI-driven audience segmentation and predictive retargeting" status="active"/>
+                <OfferList text="24/7 performance tracking and dynamic budget allocation" status="active"/>
+                <OfferList text="Custom analytics dashboard and bi-weekly strategy sessions" status="active"/>
 
+{/* 
                 <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
@@ -690,29 +663,30 @@ export const PricingPaidAdvertistment = () => {
                   </p>
                 </div>
                 <OfferList text="4-6 weeks delivery" status="active" />
-                <OfferList text="3 revision rounds" status="active" />
+                <OfferList text="3 revision rounds" status="active" /> */}
+
               </PricingBox>
             </>
           ) : (
             // Render Add-Ons Section Card centered
             <PricingBox packageName="Add-Ons">
               <div className="mb-2 mt-5 flex">
-                <MdOutlineControlPoint className="text-md mr-1 w-5" />
+                {/* <MdOutlineControlPoint className="text-md mr-1 w-5" /> */}
                 <p className="text-md flex text-left font-semibold leading-none">
                   {" "}
-                  Elevate your website with precision-crafted enhancements.{" "}
+                  {/* Elevate your website with precision-crafted enhancements.{" "} */}
                 </p>
               </div>
-              <OfferList text="Extra Pages" status="active" />
-              <OfferList text="Logo Design" status="active" />
-              <OfferList text="SEO Pro" status="active" />
-              <OfferList text="E-commerce Plus" status="active" />
-              <OfferList text="Multilingual Support" status="active" />
-              <OfferList text="Maintenance Suite" status="active" />
-              <OfferList text="Custom Animations" status="active" />
-              <OfferList text="Priority Support" status="active" />
-              <OfferList text="Speed Boost" status="active" />
-              <OfferList text="Hosting Essentials" status="active" />
+              <OfferList text="Extra Platforms" status="active" />
+              <OfferList text="Custom Landing Pages" status="active" />
+              <OfferList text="Video Ad Production" status="active" />
+              <OfferList text="Dynamic Remarketing" status="active" />
+              <OfferList text="Premium Audience Research" status="active" />
+              <OfferList text="Event-Based Campaigns" status="active" />
+              <OfferList text="Advanced Analytics Dashboard" status="active" />
+              <OfferList text="Extended Budget Management" status="active" />
+              <OfferList text="Dedicated Ad Specialist" status="active" />
+              <OfferList text="Performance Audit" status="active" />
             </PricingBox>
           )}
         </div>
@@ -852,17 +826,16 @@ export const PricingContenCreating = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Transform your ideas into captivating content.{" "}
+                    Perfect for a strong, consistent foundation.{" "}
                   </p>
                 </div>
-                <OfferList text="Custom 3-page website (Home, About, Contact)" status="active" />
-                <OfferList text="Mobile-responsive design" status="active" />
-                <OfferList text="Clean, modern templates" status="active" />
-                <OfferList text="Basic SEO optimization" status="active" />
-                <OfferList text="Social media links & contact form" status="active" />
-                <OfferList text="Google Analytics setup" status="active" />
+                <OfferList text="8 custom designs (posters, flyers, ads) per month" status="active" />
+                <OfferList text="4 short videos edited for Instagram or TikTok" status="active" />
+                <OfferList text="2 optimized blog posts (up to 500 words)" status="active" />
+                <OfferList text="Content delivery within 7 business days" status="active" />
+                <OfferList text="1 round of revisions per item" status="active" />
 
-                <div className="mb-2 mt-5 flex">
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -884,43 +857,27 @@ export const PricingContenCreating = () => {
                 </div>
                 <OfferList text="2-3 weeks delivery" status="active" />
                 <OfferList text="1 Revision Round" status="active" />
-                <OfferList text="1-Month Email Support" status="active" />
+                <OfferList text="1-Month Email Support" status="active" /> */}
+
+
               </PricingBox>
+
 
               <PricingBox packageName="Premium Package">
                 <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Elevate your brand with tailored solutions.{" "}
+                    Your vision, reimagined.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Fully custom 5-page website: Home, About, Services, Blog, Contact"
-                  status="active"
-                />
-                <OfferList
-                  text="Mobile-responsive & uniquely designed to match your brand"
-                  status="active"
-                />
-                <OfferList
-                  text="Advanced SEO for higher search visibility"
-                  status="active"
-                />
-                <OfferList
-                  text="Social media and email marketing integration"
-                  status="active"
-                />
-                <OfferList
-                  text="Blog, e-commerce, or booking system setup"
-                  status="active"
-                />
-                <OfferList
-                  text="Analytics with detailed reports"
-                  status="active"
-                />
+                <OfferList text="15 custom designs (posters, flyers, ads) per month" status="active" />
+                <OfferList text="8 short videos edited + 2 professional video shoots for Instagram or TikTok" status="active" />
+                <OfferList text="4 SEO-optimized blog posts (up to 800 words)" status="active" />
+                <OfferList text="Expedited content creation within 5 business days" status="active"/>
+                <OfferList text="Unlimited revisions" status="active" />
 
-                <div className="mb-2 mt-5 flex">
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -948,7 +905,8 @@ export const PricingContenCreating = () => {
                   </p>
                 </div>
                 <OfferList text="4-6 weeks delivery" status="active" />
-                <OfferList text="3 revision rounds" status="active" />
+                <OfferList text="3 revision rounds" status="active" /> */}
+
               </PricingBox>
             </>
           ) : (
@@ -958,19 +916,45 @@ export const PricingContenCreating = () => {
                 <MdOutlineControlPoint className="text-md mr-1 w-5" />
                 <p className="text-md flex text-left font-semibold leading-none">
                   {" "}
-                  Elevate your website with precision-crafted enhancements.{" "}
+                  Video Editing{" "}
                 </p>
               </div>
-              <OfferList text="Extra Pages" status="active" />
-              <OfferList text="Logo Design" status="active" />
-              <OfferList text="SEO Pro" status="active" />
-              <OfferList text="E-commerce Plus" status="active" />
-              <OfferList text="Multilingual Support" status="active" />
-              <OfferList text="Maintenance Suite" status="active" />
-              <OfferList text="Custom Animations" status="active" />
-              <OfferList text="Priority Support" status="active" />
-              <OfferList text="Speed Boost" status="active" />
-              <OfferList text="Hosting Essentials" status="active" />
+              <OfferList text="Up to 10 videos (up to 5 minutes each)" status="active" />
+              <OfferList text="Hollywood-grade editing with cinematic effects" status="active" />
+              <OfferList text="Advanced sound design and audio mastering" status="active" />
+              <OfferList text="Dedicated editor for seamless collaboration" status="active" />
+              <OfferList text="Priority delivery in 3 business days" status="active" />
+
+
+              <div className="mb-2 mt-5 flex">
+                <MdOutlineControlPoint className="text-md mr-1 w-5" />
+                <p className="text-md flex text-left font-semibold leading-none">
+                  {" "}
+                  Videography{" "}
+                </p>
+              </div>
+              <OfferList text="Half-day shoot (4 hours)" status="active" />
+              <OfferList text="4K ultra-HD video quality" status="active" />
+              <OfferList text="Advanced lighting and audio setup" status="active" />
+              <OfferList text="Edited highlight reel (2–3 minutes)" status="active" />
+              <OfferList text="Perfect for marketing campaigns and product launches" status="active" />
+
+
+              {/* <div className="mb-2 mt-5 flex">
+                <MdOutlineControlPoint className="text-md mr-1 w-5" />
+                <p className="text-md flex text-left font-semibold leading-none">
+                  {" "}
+                  Photography{" "}
+                </p>
+              </div>
+              <OfferList text="Full-day photoshoot (up to 8 hours)" status="active" />
+              <OfferList text="50+ expertly retouched photos" status="active" />
+              <OfferList text="Creative direction and styling" status="active" />
+              <OfferList text="High-resolution and web-optimized formats" status="active" />
+              <OfferList text="On-location or studio setup for product photography" status="active" />
+              <OfferList text="Tailored for campaigns, and premium projects" status="active" />
+              <OfferList text="Ideal for branding, product photography, and social media" status="active" /> */}
+
             </PricingBox>
           )}
         </div>
@@ -1108,23 +1092,19 @@ export const PricingMobileAppDevelopment = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Essentials for a stunning online presence.{" "}
+                    Elevate your app with advanced features.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Custom 3-page website (Home, About, Contact)"
-                  status="active"
-                />
-                <OfferList text="Mobile-responsive design" status="active" />
-                <OfferList text="Clean, modern templates" status="active" />
-                <OfferList text="Basic SEO optimization" status="active" />
-                <OfferList
-                  text="Social media links & contact form"
-                  status="active"
-                />
-                <OfferList text="Google Analytics setup" status="active" />
 
-                <div className="mb-2 mt-5 flex">
+                <OfferList text="iOS & Android" status="active" />
+                <OfferList text="Complex, Feature-rich design" status="active" />
+                <OfferList text="Custom functionality, API integrations" status="active" />
+                <OfferList text="Advanced, tailored design for optimal user experience" status="active" />
+                <OfferList text="Full backend development and integration" status="active" />
+                <OfferList text="10–12 weeks" status="active" />
+                <OfferList text="Up to 3 rounds" status="active" />
+
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -1146,7 +1126,8 @@ export const PricingMobileAppDevelopment = () => {
                 </div>
                 <OfferList text="2-3 weeks delivery" status="active" />
                 <OfferList text="1 Revision Round" status="active" />
-                <OfferList text="1-Month Email Support" status="active" />
+                <OfferList text="1-Month Email Support" status="active" /> */}
+
               </PricingBox>
 
               <PricingBox packageName="Premium Package">
@@ -1154,35 +1135,20 @@ export const PricingMobileAppDevelopment = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Elevate your brand with tailored solutions.{" "}
+                    Unleash your app's full potential.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Fully custom 5-page website: Home, About, Services, Blog, Contact"
-                  status="active"
-                />
-                <OfferList
-                  text="Mobile-responsive & uniquely designed to match your brand"
-                  status="active"
-                />
-                <OfferList
-                  text="Advanced SEO for higher search visibility"
-                  status="active"
-                />
-                <OfferList
-                  text="Social media and email marketing integration"
-                  status="active"
-                />
-                <OfferList
-                  text="Blog, e-commerce, or booking system setup"
-                  status="active"
-                />
-                <OfferList
-                  text="Analytics with detailed reports"
-                  status="active"
-                />
+                <OfferList text="iOS & Android (plus cross-platform support)" status="active"/>
+                <OfferList text="Fully custom, cutting-edge design" status="active"/>
+                <OfferList text="Advanced functionality, AI, real-time data integration" status="active"/>
+                <OfferList text="Premium, personalized design with animation" status="active"/>
+                <OfferList text="Scalable, high-performance backend" status="active"/>
+                <OfferList text="Comprehensive testing, including beta launch" status="active"/>
+                <OfferList text="14–16 weeks" status="active"/>
+                <OfferList text="Unlimited revisions during development" status="active"/>
+              
 
-                <div className="mb-2 mt-5 flex">
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -1210,7 +1176,8 @@ export const PricingMobileAppDevelopment = () => {
                   </p>
                 </div>
                 <OfferList text="4-6 weeks delivery" status="active" />
-                <OfferList text="3 revision rounds" status="active" />
+                <OfferList text="3 revision rounds" status="active" /> */}
+
               </PricingBox>
             </>
           ) : (
@@ -1373,23 +1340,20 @@ export const PricingCopyWriting = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Essentials for a stunning online presence.{" "}
+                    Words that inspire. Stories that sell.{" "}
                   </p>
                 </div>
-                <OfferList
-                  text="Custom 3-page website (Home, About, Contact)"
-                  status="active"
-                />
-                <OfferList text="Mobile-responsive design" status="active" />
-                <OfferList text="Clean, modern templates" status="active" />
-                <OfferList text="Basic SEO optimization" status="active" />
-                <OfferList
-                  text="Social media links & contact form"
-                  status="active"
-                />
-                <OfferList text="Google Analytics setup" status="active" />
 
-                <div className="mb-2 mt-5 flex">
+                <OfferList text="Up to 3 pages" status="active" />
+                <OfferList text="5 items (150–200 words each)" status="active" />
+                <OfferList text="10 short posts" status="active" />
+                <OfferList text="1 email (up to 300 words)" status="active" />
+                <OfferList text="1 post (up to 500 words)" status="active" />
+                <OfferList text="Primary keyword integration" status="active" />
+                <OfferList text="5–7 business days" status="active" />
+                <OfferList text="1 round included" status="active" />
+
+                {/* <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
@@ -1411,7 +1375,8 @@ export const PricingCopyWriting = () => {
                 </div>
                 <OfferList text="2-3 weeks delivery" status="active" />
                 <OfferList text="1 Revision Round" status="active" />
-                <OfferList text="1-Month Email Support" status="active" />
+                <OfferList text="1-Month Email Support" status="active" /> */}
+
               </PricingBox>
 
               <PricingBox packageName="Premium Package">
@@ -1419,34 +1384,24 @@ export const PricingCopyWriting = () => {
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
                     {" "}
-                    Elevate your brand with tailored solutions.{" "}
+                    Tailored content for extraordinary results.{" "}
                   </p>
                 </div>
                 <OfferList
                   text="Fully custom 5-page website: Home, About, Services, Blog, Contact"
                   status="active"
                 />
-                <OfferList
-                  text="Mobile-responsive & uniquely designed to match your brand"
-                  status="active"
-                />
-                <OfferList
-                  text="Advanced SEO for higher search visibility"
-                  status="active"
-                />
-                <OfferList
-                  text="Social media and email marketing integration"
-                  status="active"
-                />
-                <OfferList
-                  text="Blog, e-commerce, or booking system setup"
-                  status="active"
-                />
-                <OfferList
-                  text="Analytics with detailed reports"
-                  status="active"
-                />
-
+                <OfferList text="Up to 6 pages" status="active" />
+                <OfferList text="10 items (200–300 words each)" status="active" />
+                <OfferList text="20 posts" status="active" />
+                <OfferList text="2 emails (up to 500 words each)" status="active" />
+                <OfferList text="2 posts (up to 1,000 words each)" status="active" />
+                <OfferList text="3 variations (e.g., Facebook, Google)" status="active" />
+                <OfferList text="Keyword research and optimization" status="active" />
+                <OfferList text="3–5 business days" status="active" />
+                <OfferList text="Up to 3 rounds" status="active" />
+               
+{/* 
                 <div className="mb-2 mt-5 flex">
                   <MdOutlineControlPoint className="text-md mr-1 w-5" />
                   <p className="text-md flex text-left font-semibold leading-none">
@@ -1475,7 +1430,8 @@ export const PricingCopyWriting = () => {
                   </p>
                 </div>
                 <OfferList text="4-6 weeks delivery" status="active" />
-                <OfferList text="3 revision rounds" status="active" />
+                <OfferList text="3 revision rounds" status="active" /> */}
+
               </PricingBox>
             </>
           ) : (
@@ -1485,19 +1441,19 @@ export const PricingCopyWriting = () => {
                 <MdOutlineControlPoint className="text-md mr-1 w-5" />
                 <p className="text-md flex text-left font-semibold leading-none">
                   {" "}
-                  Elevate your website with precision-crafted enhancements.{" "}
+                  Amplify your impact with tailored enhancements.{" "}
                 </p>
               </div>
               <OfferList text="Extra Pages" status="active" />
-              <OfferList text="Logo Design" status="active" />
-              <OfferList text="SEO Pro" status="active" />
-              <OfferList text="E-commerce Plus" status="active" />
-              <OfferList text="Multilingual Support" status="active" />
-              <OfferList text="Maintenance Suite" status="active" />
-              <OfferList text="Custom Animations" status="active" />
-              <OfferList text="Priority Support" status="active" />
-              <OfferList text="Speed Boost" status="active" />
-              <OfferList text="Hosting Essentials" status="active" />
+              <OfferList text="Additional Blog Posts" status="active" />
+              <OfferList text="Social Media Campaigns" status="active" />
+              <OfferList text="Email Sequences" status="active" />
+              <OfferList text="Landing Pages" status="active" />
+              <OfferList text="Custom SEO Package" status="active" />
+              <OfferList text="Industry Research" status="active" />
+              <OfferList text="Custom Tone Development" status="active" />
+              <OfferList text="Performance Audit" status="active" />
+              <OfferList text="Priority Turnaround" status="active" />
             </PricingBox>
           )}
         </div>
