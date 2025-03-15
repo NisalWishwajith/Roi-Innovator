@@ -58,7 +58,7 @@ export const PricingWebDesign = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >
@@ -319,7 +319,7 @@ export const PricingSocialMediamanagement = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >
@@ -570,7 +570,7 @@ export const PricingPaidAdvertistment = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >
@@ -814,7 +814,7 @@ export const PricingContenCreating = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >
@@ -1080,7 +1080,7 @@ export const PricingMobileAppDevelopment = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >
@@ -1328,7 +1328,7 @@ export const PricingCopyWriting = () => {
         <div
           className={` ${
             isMonthly
-              ? "grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
+              ? "grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2  lg:grid-cols-2 lg:gap-x-10 xl:gap-x-20"
               : "flex w-full items-center justify-center px-0 md:px-40 lg:px-56 xl:px-80"
           }`}
         >

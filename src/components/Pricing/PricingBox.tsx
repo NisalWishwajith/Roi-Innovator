@@ -5,10 +5,10 @@ const PricingBox = (props: {
   const { packageName, children } = props;
 
   return (
-    <div className="container w-full">
+    <div >
       {/* Add relative positioning to the card container */}
       <div
-        className="2xl:h-[580px] lg:h-[600px] md:h-[690px] h-[550px] h-auto border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
+        className="2xl:h-[580px] lg:h-[600px] md:h-[690px] h-[550px] h-auto border-2 border-primary wow fadeInUp z-10 relative rounded-3xl px-6 py-10 shadow-signUp bg-[#1D2144]/80 hover:-translate-y-4 transition duration-300 ease-in-out"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-center">
