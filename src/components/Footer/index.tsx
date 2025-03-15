@@ -113,6 +113,15 @@ const Footer = () => {
                       Benefits{" "}
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
+                    >
+                      {" "}
+                      Home{" "}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -134,7 +143,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/terms"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
