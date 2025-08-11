@@ -28,7 +28,7 @@ const WebDesignForm = () => {
             </button>
           </Link>
           <h2 className="text-4xl md:text-6xl mt-4 pt-3 pb-8 text-center font-bold underline bg-gradient-to-r from-primary via-iceblue to-dark bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient">
-            Web Design
+            Custom Web Design
           </h2>
           <div className="w-10"></div>
         </div>
