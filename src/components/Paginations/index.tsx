@@ -25,9 +25,11 @@ import { Topic } from "@mui/icons-material";
 const tabConfig = [
   {
     id: "webdesign",
-    label: "Web Design",
+    label: "Custom Web Design",
     topic: "Your brand, reimagined online",
-    def: "Beautifully designed, seamlessly functional, and built to make an impact. At ROIInnovators, we craft websites that inspire, engage, and deliver real results.",
+    def1: "Beautifully designed, seamlessly functional, and built to make an impact.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
+    def2: "At ROIInnovators, we craft websites that inspire, engage, and deliver real results.",
     introduction:"At ROllnnovators, we craft custom websites that blend stunning design with flawless functionality. Our web design services ensure your site reflects your brand's Identity, while our development team builds responsive, SEO-optimized websites that deliver a seamless user experience across all devices. Whether it's a sleek landing page or a full e-commerce platform, we bring your vision to life and drive real business results. Let us transform your online presence today!",
     component: <WebDesign />,
     pricing: <PricingWebDesign />,
@@ -36,7 +38,9 @@ const tabConfig = [
     id: "socialmediamanagement",
     label: "Social Media Management",
     topic: "Your brand, amplified.",
-    def: "We craft content that captivates, strategies that grow, and connections that matter, turning followers into loyal customers. Let’s transform your social media into a powerful growth engine.",
+    def1: "We craft content that captivates, strategies that grow, and connections that matter, turning followers into loyal customers.",
+    def2: "Let’s transform your social media into a powerful growth engine.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
     introduction: `At ROIInnovators, we manage your social media so you can focus on growing your business. We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
     component: <SocialMediaManagement />,
     pricing: <PricingSocialMediamanagement />,
@@ -45,7 +49,9 @@ const tabConfig = [
     id: "paidadvertising",
     label: "Paid Advertising",
     topic: "Reach your audience. Drive results.",
-    def: "Tailored campaigns that turn clicks into customers and maximize your ROI—every dollar optimized for impact.",
+    def1: "Tailored campaigns that turn clicks into customers.",
+    def2: "maximize your ROI—every dollar optimized for impact.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
     introduction: `At ROIInnovators, our paid advertising services are designed to drive targeted traffic and boost conversions. We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!`,
     component: <PaidAdvertising />,
     pricing: <PricingPaidAdvertistment />,
@@ -54,7 +60,9 @@ const tabConfig = [
     id: "mobileappdevelopment",
     label: "Mobile App Development",
     topic: "Apps that elevate your business",
-    def: "From concept to launch, we develop intuitive, high-performance apps. Intuitive, high-performing, and tailored to your vision—designed to captivate users and drive results.",
+    def1: "From concept to launch, we develop intuitive, high-performance apps.",
+    def2: "Intuitive, high-performing, and tailored to your vision—designed to captivate users and drive results.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
     introduction: `At ROIInnovators, we craft custom mobile experiences that connect, engage, and perform. From iOS to Android, our apps are designed to simplify, streamline, and elevate. Whether enhancing customer interaction or optimizing operations, we turn your ideas into impactful, user-centered solutions. Ready to bring your app vision to life?`,
     component: <MobileAppDevelopment />,
     pricing: <PricingMobileAppDevelopment />,
@@ -63,7 +71,9 @@ const tabConfig = [
     id: "copywriting",
     label: "Copy Writing",
     topic: "Words that work",
-    def: "Persuasive, impactful, and tailored to inspire action—our copy turns visitors into customers and your message into results.",
+    def1: "Persuasive, impactful, and tailored to inspire action.",
+    def2: "Our copy turns visitors into customers and your message into results.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
     introduction: `At ROIInnovators, our copywriting services focus on crafting compelling text that grabs attention and drives action. Copywriting is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage with your business. Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!`,
     component: <Copywriting />,
     pricing: <PricingCopyWriting />,
@@ -72,7 +82,9 @@ const tabConfig = [
     id: "contentcreation",
     label: "Content Creation",
     topic: "Content that connects.",
-    def: "From stunning visuals to engaging videos, we bring your brand to life. Start with a free video and see how we make your business stand out.",
+    def1: "From stunning visuals to engaging videos, we bring your brand to life.",
+    def2: "Start with a free video and see how we make your business stand out.",
+    video: "https://www.youtube.com/embed/oLXzvGLqhlY?si=KJBQuRpfKBDP0IgP",
     introduction: `At ROIInnovators, we create captivating content that speaks to your audience and elevates your brand. From eye-catching visuals to engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! Let’s showcase what we can do and help your business stand out online.`,
     component: <Contentcreation/>,
     pricing: <PricingContenCreating />,
@@ -166,7 +178,7 @@ export default function TabsComponent() {
               {/* Tab Content */}
               <div>
                 {tabConfig.map(
-                  ({ id, label, introduction, component, topic , def }) =>
+                  ({ id, label, video, component, topic , def1, def2 }) =>
                     activeTab === id && (
                       <motion.div
                         key={id}
@@ -193,22 +205,23 @@ export default function TabsComponent() {
                           <h1 className="rounded-md p-2 text-center font-semibold md:text-2xl">
                             {topic}
                           </h1>
-                          <p className="text-sm md:text-md pt-2 text-center md:font-semibold text-gray-300">
-                           {def}
+                          <div className="flex justify-center items-center w-full">
+            <div className="w-full h-[300px] md:h-[400px] max-w-4xl aspect-w-16 aspect-h-80 mb-8">
+
+              <iframe
+                className="w-full h-full"
+                src={video}
+                title="YouTube video player"
+                allow=""
+                allowFullScreen
+              />
+            </div>
+          </div>
+                          <p className="text-xs md:text-lg pt-2 text-center text-gray-300 md:tracking-[3px]">
+                           {def1} <br /> {def2}
                           </p>
-                          <hr className="md:w-1/2 mx-auto my-5 md:mt-10 border-1 border-gray-300" />
-                          <div className="md:flex">
-                            <div> 
-                              <div className="text-2xl md:text-3xl font-semibold px-6 md:m-3"> Summary </div> 
-                            </div>
-                            <div>
-                              <p className="text-xs md:text-md lg:text-lg md:pt-3 m-2 text-justify text-gray-300">
-                                {introduction}
-                              </p>
-                            </div>
-                          </div>
                         </div>
-                        <div className="m-auto pb-5">
+                        <div className="m-auto pb-5 pt-12">
                           <h1 className="my-2 m-auto flex justify-center w-fit text-center w-1/2 rounded-md border border-iceblue bg-black/90 py-2 px-6 text-center font-semibold shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] md:text-2xl">
                           Our Process
                           </h1>
@@ -222,6 +235,7 @@ export default function TabsComponent() {
                           </Link>
                         </div>
                       </motion.div>
+                      
                     )
                 )}
               </div>

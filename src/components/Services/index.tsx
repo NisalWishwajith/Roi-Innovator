@@ -4,7 +4,7 @@ import ServiceBlock from "./serviceBlock";
 
 export const Services = () => {
   const services = [
-    { title: "Web Design", imgSrc: "/images/services/Web-Design.png", order: "textFirst" },
+    { title: "Custom Web Design", imgSrc: "/images/services/Web-Design.png", order: "textFirst" },
     { title: "Social Media Management", imgSrc: "/images/services/Social-Media-Managment.png", order: "imageFirst" },
     { title: "Content Creation", imgSrc: "/images/services/Content-Creation.png", order: "textFirst" },
     { title: "Mobile App Development", imgSrc: "/images/services/mobile-app-dev.png", order: "imageFirst" },
