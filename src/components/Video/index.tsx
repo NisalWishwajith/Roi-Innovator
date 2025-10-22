@@ -10,7 +10,7 @@ const Video = () => {
 
   return (
     <section id="video" className="relative overflow-x-clip py-20">
-      <div className="container px-10">
+      {/* <div className="container px-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: -40 }}
@@ -30,7 +30,7 @@ const Video = () => {
             </div>
           </div>
         </motion.div>
-      </div>
+      </div> */}
       <div className="flex justify-center items-center w-full m-auto">
         <motion.div
           ref={ref}
